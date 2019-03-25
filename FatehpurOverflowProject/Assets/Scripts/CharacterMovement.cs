@@ -83,6 +83,8 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private bool playerCanDoubleJump;
 	private bool alreadyJumped;
+	[SerializeField]
+	private float wallJumpSpeed;
 
 	public Vector3 Velocity
 	{
@@ -164,7 +166,7 @@ public class CharacterMovement : MonoBehaviour
 		}
 		else
 		{
-			if(playerCanDoubleJump && !alreadyJumped && m_Jump)
+			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
 			{
 				m_RigidBody.drag = 0f;
 				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
@@ -180,7 +182,7 @@ public class CharacterMovement : MonoBehaviour
 			}
 		}
 		m_Jump = false;
-		
+
 	}
 
 
@@ -239,6 +241,22 @@ public class CharacterMovement : MonoBehaviour
 		if (!m_PreviouslyGrounded && m_IsGrounded && m_Jumping)
 		{
 			m_Jumping = false;
+		}
+	}
+
+	private void OnCollisionStay(Collision collision)
+	{
+		if (collision.gameObject.tag == "JumpWall" && collision.contacts[0].normal.y < 0.1f)
+		{
+			
+			if (Input.GetButtonDown("Jump"))
+			{
+				m_RigidBody.drag = 0f;
+				m_RigidBody.velocity = collision.contacts[0].normal * wallJumpSpeed;
+				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+				m_Jumping = true;
+				alreadyJumped = true;
+			}
 		}
 	}
 }
