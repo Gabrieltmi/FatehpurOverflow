@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
 	[SerializeField] private float jumpMultiplier;
 	[SerializeField] private KeyCode jumpKey;
 
+	private bool isGlading;
 
 	private bool isJumping;
 

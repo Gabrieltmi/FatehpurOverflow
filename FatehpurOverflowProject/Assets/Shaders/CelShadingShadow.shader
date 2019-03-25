@@ -1,11 +1,12 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Our Toonshader Vol. 3" {
+Shader "ToonShader" {
    Properties {
     
     // Levels
+	   /**/
       _SpecularColor ("SPECULAR", Color) = (1,1,1,1)
-      _Specular      ("    Specular size", Range(0.5,1)) = 0.72
+      _Specular      ("    Specular size", Range(0.5,1)) = 1
       _FadeSpecular  ("    Specular blur", Range(0,1)) = 0
 
       _DiffuseColor  ("DIFFUSE", Color) = (0.5,0.5,0.5,1) 
@@ -15,10 +16,11 @@ Shader "Our Toonshader Vol. 3" {
       _ShadowColor   ("SHADOW", Color) = (0.25,0.25,0.25,1)
       _FadeShadow    ("    Shadow blur", Range(0,1)) = 0
 
-
+	
       _OutlineColor ("OUTLINE", Color) = (0,0,0,0)
-      _Outline ("    Outline size", Range(0,1)) = 0.3
-    
+      _Outline ("    Outline size", Range(0,1)) = 0
+   
+
     // Texture
       _MainTex ("TEXTURE", 2D) = "AK47" {}
       _TexAlpha ("    Texture alpha", Range(0,1)) = 0
