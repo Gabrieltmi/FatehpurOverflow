@@ -85,6 +85,7 @@ public class CharacterMovement : MonoBehaviour
 	private bool alreadyJumped;
 	[SerializeField]
 	private float wallJumpSpeed;
+	private bool isWallJumping = false;
 
 	public Vector3 Velocity
 	{
@@ -128,64 +129,11 @@ public class CharacterMovement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		GroundCheck();
-		Vector2 input = GetInput();
 
-		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
-		{
-			// always move along the camera forward as it is the direction that it being aimed at
-			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
-			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
 
-			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
-			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
-			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
-			if (m_RigidBody.velocity.sqrMagnitude <
-				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
-			{
-				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
-			}
-		}
-
-		if (m_IsGrounded)
-		{
-			alreadyJumped = false;
-			m_RigidBody.drag = 5f;
-
-			if (m_Jump)
-			{
-				m_RigidBody.drag = 0f;
-				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
-				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
-				m_Jumping = true;
-			}
-
-			if (!m_Jumping && Mathf.Abs(input.x) < float.Epsilon && Mathf.Abs(input.y) < float.Epsilon && m_RigidBody.velocity.magnitude < 1f)
-			{
-				m_RigidBody.Sleep();
-			}
-		}
-		else
-		{
-			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
-			{
-				m_RigidBody.drag = 0f;
-				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
-				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
-				m_Jumping = true;
-				alreadyJumped = true;
-			}
-
-			m_RigidBody.drag = 0f;
-			if (m_PreviouslyGrounded && !m_Jumping)
-			{
-				StickToGroundHelper();
-			}
-		}
-		m_Jump = false;
+		MovimentAndJumpController();
 
 	}
-
-
 	private float SlopeMultiplier()
 	{
 		float angle = Vector3.Angle(m_GroundContactNormal, Vector3.up);
@@ -244,13 +192,120 @@ public class CharacterMovement : MonoBehaviour
 		}
 	}
 
+	private void MovimentAndJumpController()
+	{
+		//Moviment
+
+		Vector2 input = GetInput();
+
+		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && advancedSettings.airControl && !isWallJumping)
+		{
+			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
+			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
+
+			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
+			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
+			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
+			if (m_RigidBody.velocity.sqrMagnitude <
+				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
+			{
+				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+			}
+		}
+
+		else if (m_IsGrounded)
+			
+		{
+				Vector3 newVel = m_RigidBody.velocity;
+				if (newVel.magnitude <= advancedSettings.slowDownRate)
+				{
+					m_RigidBody.velocity = Vector3.zero;
+				}
+				else
+				{
+					m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
+				}
+		}
+
+		else if((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (m_IsGrounded))
+		{
+			// always move along the camera forward as it is the direction that it being aimed at
+			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
+			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
+
+			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
+			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
+			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
+			if (m_RigidBody.velocity.sqrMagnitude <
+				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
+			{
+				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+			}
+		}
+		else if(m_IsGrounded)
+		{
+				Vector3 newVel = m_RigidBody.velocity;
+				if (newVel.magnitude <= advancedSettings.slowDownRate)
+				{
+					m_RigidBody.velocity = Vector3.zero;
+				}
+				else
+				{
+					m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
+				}
+			
+		}
+
+		// Jump 
+
+		if (m_IsGrounded)
+		{
+			isWallJumping = false;
+			alreadyJumped = false;
+			m_RigidBody.drag = 5f;
+
+			if (m_Jump)
+			{
+				m_RigidBody.drag = 0f;
+				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
+				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+				m_Jumping = true;
+			}
+
+			if (!m_Jumping && Mathf.Abs(input.x) < float.Epsilon && Mathf.Abs(input.y) < float.Epsilon && m_RigidBody.velocity.magnitude < 1f)
+			{
+				m_RigidBody.Sleep();
+			}
+		}
+		else
+		{
+			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
+			{
+				m_RigidBody.drag = 0f;
+				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
+				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+				m_Jumping = true;
+				alreadyJumped = true;
+			}
+
+			m_RigidBody.drag = 0f;
+			if (m_PreviouslyGrounded && !m_Jumping)
+			{
+				StickToGroundHelper();
+			}
+		}
+		m_Jump = false;
+	}
+
+
 	private void OnCollisionStay(Collision collision)
 	{
 		if (collision.gameObject.tag == "JumpWall" && collision.contacts[0].normal.y < 0.1f)
 		{
-			
+
 			if (Input.GetButtonDown("Jump"))
 			{
+				isWallJumping = true;
 				m_RigidBody.drag = 0f;
 				m_RigidBody.velocity = collision.contacts[0].normal * wallJumpSpeed;
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
@@ -259,5 +314,6 @@ public class CharacterMovement : MonoBehaviour
 			}
 		}
 	}
+
 }
 
