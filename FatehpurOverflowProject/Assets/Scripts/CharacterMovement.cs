@@ -86,6 +86,9 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private float wallJumpSpeed;
 	private bool isWallJumping = false;
+	private AudioManager audioManager;
+	private bool isWalking;
+	private bool alreadyplayed;
 
 	public Vector3 Velocity
 	{
@@ -111,6 +114,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Start()
 	{
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		m_RigidBody = GetComponent<Rigidbody>();
 		m_Capsule = GetComponent<CapsuleCollider>();
 	}
@@ -122,6 +126,12 @@ public class CharacterMovement : MonoBehaviour
 		if (Input.GetButtonDown("Jump") && !m_Jump)
 		{
 			m_Jump = true;
+		}
+
+		if (isWalking && !alreadyplayed)
+		{
+			audioManager.PlaySound("Steps");
+			alreadyplayed = true;
 		}
 	}
 
@@ -198,6 +208,45 @@ public class CharacterMovement : MonoBehaviour
 
 		Vector2 input = GetInput();
 
+		//moviment
+		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (m_IsGrounded))
+		{
+			// always move along the camera forward as it is the direction that it being aimed at
+			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
+			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
+
+			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
+			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
+			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
+			if (m_RigidBody.velocity.sqrMagnitude <
+				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
+			{
+				isWalking = true;
+				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+				Debug.Log("Walk" + desiredMove * SlopeMultiplier());
+			}
+		}
+		else if (m_IsGrounded)
+		{
+
+			Vector3 newVel = m_RigidBody.velocity;
+			if (newVel.magnitude <= advancedSettings.slowDownRate)
+			{
+				
+				m_RigidBody.velocity = Vector3.zero;
+			}
+			else
+			{
+				
+				m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
+			}
+			isWalking = false;
+			audioManager.StopSound("Steps");
+			alreadyplayed = false;
+
+		}
+
+		//Moviment on air
 		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && advancedSettings.airControl && !isWallJumping)
 		{
 			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
@@ -210,50 +259,28 @@ public class CharacterMovement : MonoBehaviour
 				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
 			{
 				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+				Debug.Log("Air" + desiredMove * SlopeMultiplier());
+			}
+			if (!m_IsGrounded)
+			{
+				isWalking = false;
+				audioManager.StopSound("Steps");
+				alreadyplayed = false;
 			}
 		}
 
 		else if (m_IsGrounded)
-			
-		{
-				Vector3 newVel = m_RigidBody.velocity;
-				if (newVel.magnitude <= advancedSettings.slowDownRate)
-				{
-					m_RigidBody.velocity = Vector3.zero;
-				}
-				else
-				{
-					m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
-				}
-		}
 
-		else if((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (m_IsGrounded))
 		{
-			// always move along the camera forward as it is the direction that it being aimed at
-			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
-			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
-
-			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
-			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
-			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
-			if (m_RigidBody.velocity.sqrMagnitude <
-				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
+			Vector3 newVel = m_RigidBody.velocity;
+			if (newVel.magnitude <= advancedSettings.slowDownRate)
 			{
-				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+				m_RigidBody.velocity = Vector3.zero;
 			}
-		}
-		else if(m_IsGrounded)
-		{
-				Vector3 newVel = m_RigidBody.velocity;
-				if (newVel.magnitude <= advancedSettings.slowDownRate)
-				{
-					m_RigidBody.velocity = Vector3.zero;
-				}
-				else
-				{
-					m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
-				}
-			
+			else
+			{
+				m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
+			}
 		}
 
 		// Jump 
@@ -270,6 +297,7 @@ public class CharacterMovement : MonoBehaviour
 				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
+				audioManager.PlaySound("Jump1");
 			}
 
 			if (!m_Jumping && Mathf.Abs(input.x) < float.Epsilon && Mathf.Abs(input.y) < float.Epsilon && m_RigidBody.velocity.magnitude < 1f)
@@ -286,6 +314,7 @@ public class CharacterMovement : MonoBehaviour
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
 				alreadyJumped = true;
+				audioManager.PlaySound("Jump2");
 			}
 
 			m_RigidBody.drag = 0f;
@@ -300,7 +329,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void OnCollisionStay(Collision collision)
 	{
-		if (collision.gameObject.tag == "JumpWall" && collision.contacts[0].normal.y < 0.1f)
+		if (collision.gameObject.tag == "JumpWall" && collision.contacts[0].normal.y < 0.5f)
 		{
 
 			if (Input.GetButtonDown("Jump"))
@@ -311,6 +340,7 @@ public class CharacterMovement : MonoBehaviour
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
 				alreadyJumped = true;
+				audioManager.PlaySound("Jump2");
 			}
 		}
 	}
