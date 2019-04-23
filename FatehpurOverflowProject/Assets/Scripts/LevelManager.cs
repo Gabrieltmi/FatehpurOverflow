@@ -8,13 +8,12 @@ public class LevelManager : MonoBehaviour
 	// Start is called before the first frame update
 	private void Awake()
 	{
-		
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 	}
 
 
 	void Start()
     {
-		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		audioManager.PlaySound("WindDesert");
     }
 
