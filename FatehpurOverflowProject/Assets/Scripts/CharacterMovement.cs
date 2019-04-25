@@ -67,7 +67,6 @@ public class CharacterMovement : MonoBehaviour
 		public float groundCheckDistance = 0.01f; // distance for checking if the controller is grounded ( 0.01f seems to work best for this )
 		public float stickToGroundHelperDistance = 0.5f; // stops the character
 		public float slowDownRate = 20f; // rate at which the controller comes to a stop when there is no input
-		public bool airControl; // can the user control the direction that is being moved in the air
 		[Tooltip("set it to 0.1 or more if you get stuck in wall")]
 		public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
 	}
@@ -208,8 +207,7 @@ public class CharacterMovement : MonoBehaviour
 
 		Vector2 input = GetInput();
 
-		//moviment
-		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (m_IsGrounded))
+		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && !isWallJumping)
 		{
 			// always move along the camera forward as it is the direction that it being aimed at
 			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
@@ -246,28 +244,6 @@ public class CharacterMovement : MonoBehaviour
 
 		}
 
-		//Moviment on air
-		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && advancedSettings.airControl && !isWallJumping)
-		{
-			Vector3 desiredMove = this.transform.forward * input.y + this.transform.right * input.x;
-			desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
-
-			desiredMove.x = desiredMove.x * movementSettings.CurrentTargetSpeed;
-			desiredMove.z = desiredMove.z * movementSettings.CurrentTargetSpeed;
-			desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
-			if (m_RigidBody.velocity.sqrMagnitude <
-				(movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed))
-			{
-				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
-				Debug.Log("Air" + desiredMove * SlopeMultiplier());
-			}
-			if (!m_IsGrounded)
-			{
-				isWalking = false;
-				audioManager.StopSound("Steps");
-				alreadyplayed = false;
-			}
-		}
 
 		else if (m_IsGrounded)
 
