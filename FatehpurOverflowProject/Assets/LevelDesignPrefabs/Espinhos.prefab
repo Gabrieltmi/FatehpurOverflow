@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6685196810379997346}
   - component: {fileID: 3321996503116878530}
   - component: {fileID: 1632978028809415464}
+  - component: {fileID: 1968708240}
   m_Layer: 0
   m_Name: Espinhos
   m_TagString: Untagged
@@ -91,3 +92,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &1968708240
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7027415190220112108}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8514535487cb27a488d46318d4f4a510, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8514535487cb27a488d46318d4f4a510, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

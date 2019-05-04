@@ -221,7 +221,7 @@ public class CharacterMovement : MonoBehaviour
 			{
 				isWalking = true;
 				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
-				Debug.Log("Walk" + desiredMove * SlopeMultiplier());
+				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
 			}
 		}
 		else if (m_IsGrounded)
