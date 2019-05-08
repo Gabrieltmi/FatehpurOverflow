@@ -34,7 +34,7 @@ CGPROGRAM
 #include "UnityStandardUtils.cginc"
 #include "UnityGBuffer.cginc"
 #include "UnityStandardBRDF.cginc"
-#include "UnityStandardBRDFCopia.cginc"
+#include "UnityStandardBRDFCustom.cginc"
 
 sampler2D _CameraGBufferTexture0;
 sampler2D _CameraGBufferTexture1;
