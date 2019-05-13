@@ -21,4 +21,5 @@ public class ButtonsMenu : MonoBehaviour
 	{
 		SceneManager.LoadScene("Hub");
 	}
+
 }
