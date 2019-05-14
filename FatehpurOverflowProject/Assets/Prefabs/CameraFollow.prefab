@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2274363989992324434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -23.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47,7 +47,7 @@ MonoBehaviour:
   playerBody: {fileID: 0}
   CameraMoveSpeed: 120
   CameraFollowObj: {fileID: 0}
-  clampAngle: 33
+  clampAngle: 50
   inputSensitivity: 150
   CameraObj: {fileID: 2274363990032144969}
   PlayerObj: {fileID: 0}

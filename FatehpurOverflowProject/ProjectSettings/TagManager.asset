@@ -8,6 +8,7 @@ TagManager:
   - DeathTrigger
   - SaveTrigger
   - AudioManager
+  - Espinhos
   layers:
   - Default
   - TransparentFX
