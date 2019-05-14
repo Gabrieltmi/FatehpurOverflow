@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class coletavel : MonoBehaviour
 {
+    private GotaController gotaController;
 
+    private void Awake()
+    {
+        gotaController = GameObject.Find("PortaoFinal").GetComponent<GotaController>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +20,7 @@ public class coletavel : MonoBehaviour
 	{
 		if(col.CompareTag("Player"))
 		{
+            gotaController.actualQuantity += 1;
 			Destroy(this.gameObject);
 		}
 	}

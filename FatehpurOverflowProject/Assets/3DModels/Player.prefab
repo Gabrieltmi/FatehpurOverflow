@@ -138,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ceff8901cef92a347a13712953d3614a, type: 2}
+  - {fileID: 2100000, guid: e6946da5dbc1c7a4b9bd0ca5d12c3258, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,16 +203,15 @@ MonoBehaviour:
   advancedSettings:
     groundCheckDistance: 0.01
     stickToGroundHelperDistance: 0.5
-    slowDownRate: 10
-    airControl: 1
+    slowDownRate: 0
     shellOffset: 0
   movementSettings:
-    ForwardSpeed: 8
-    BackwardSpeed: 8
-    StrafeSpeed: 8
+    ForwardSpeed: 10
+    BackwardSpeed: 10
+    StrafeSpeed: 10
     RunMultiplier: 1.35
     RunKey: 304
-    JumpForce: 100
+    JumpForce: 150
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -224,15 +223,6 @@ MonoBehaviour:
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 2.192871
-        value: 1.0023575
-        inSlope: 0.00019399547
-        outSlope: 0.00019399547
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.13181342
         outWeight: 0
       - serializedVersion: 3
         time: 98.46008

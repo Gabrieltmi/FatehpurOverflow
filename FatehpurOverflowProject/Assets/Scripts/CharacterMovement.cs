@@ -221,7 +221,6 @@ public class CharacterMovement : MonoBehaviour
 			{
 				isWalking = true;
 				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
-				m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
 			}
 		}
 		else if (m_IsGrounded)
@@ -244,7 +243,7 @@ public class CharacterMovement : MonoBehaviour
 
 		}
 
-
+        /*
 		else if (m_IsGrounded)
 
 		{
@@ -258,19 +257,19 @@ public class CharacterMovement : MonoBehaviour
 				m_RigidBody.velocity -= newVel.normalized * advancedSettings.slowDownRate;
 			}
 		}
-
+        */
 		// Jump 
 
 		if (m_IsGrounded)
 		{
 			isWallJumping = false;
 			alreadyJumped = false;
-			m_RigidBody.drag = 5f;
+			m_RigidBody.drag = 1f;
 
 			if (m_Jump)
 			{
-				m_RigidBody.drag = 0f;
-				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
+				m_RigidBody.drag = 1f;
+				//m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
 				audioManager.PlaySound("Jump1");
@@ -285,7 +284,7 @@ public class CharacterMovement : MonoBehaviour
 		{
 			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
 			{
-				m_RigidBody.drag = 0f;
+				m_RigidBody.drag = 1f;
 				m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
@@ -293,7 +292,7 @@ public class CharacterMovement : MonoBehaviour
 				audioManager.PlaySound("Jump2");
 			}
 
-			m_RigidBody.drag = 0f;
+			m_RigidBody.drag = 1f;
 			if (m_PreviouslyGrounded && !m_Jumping)
 			{
 				StickToGroundHelper();
@@ -311,7 +310,7 @@ public class CharacterMovement : MonoBehaviour
 			if (Input.GetButtonDown("Jump"))
 			{
 				isWallJumping = true;
-				m_RigidBody.drag = 0f;
+				m_RigidBody.drag = 1f;
 				m_RigidBody.velocity = collision.contacts[0].normal * wallJumpSpeed;
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
 				m_Jumping = true;
