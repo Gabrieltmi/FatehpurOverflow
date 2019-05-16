@@ -6,13 +6,11 @@ using UnityEngine;
 public class Espinhos : MonoBehaviour
 {
 	private DeathHandler deathHandler;
-	private AudioManager audioManager;
 	AudioSource audioData;
 	// Start is called before the first frame update
 	void Start()
     {
 		deathHandler = GameObject.Find("DeathFloor").GetComponent<DeathHandler>();
-		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		audioData = GetComponent<AudioSource>();
 	}
 

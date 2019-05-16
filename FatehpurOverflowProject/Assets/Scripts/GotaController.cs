@@ -11,10 +11,12 @@ public class GotaController : MonoBehaviour
 	public int actualQuantity;
 	private TextMeshPro counterDoor;
 	public int actualLevel;
+	AudioSource audioData;
 
 	private void Awake()
 	{
 		counterDoor = GameObject.Find("CounterDoor").GetComponent<TextMeshPro>();
+
 	}
 
 	// Start is called before the first frame update
@@ -47,6 +49,7 @@ public class GotaController : MonoBehaviour
 				}
 			}
 			SceneManager.LoadScene(1);
+			audioData.Play();
 
 		}
 	}

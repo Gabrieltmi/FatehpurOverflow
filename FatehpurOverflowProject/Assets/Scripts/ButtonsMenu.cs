@@ -75,4 +75,10 @@ public class ButtonsMenu : MonoBehaviour
 			mainMenu2.SetActive(false);
 		}
 	}
+
+	public void ExitGame()
+	{
+		Application.Quit();
+	}
+
 }

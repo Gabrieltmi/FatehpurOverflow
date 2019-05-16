@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: WindDesert
     clip: {fileID: 8300000, guid: 45889f5524fef8a4e988170e05b3aa9f, type: 3}
-    volume: 0.692
+    volume: 0.57
     pitch: 1
     randomVolume: 0
     randomPitch: 0
@@ -74,6 +74,13 @@ MonoBehaviour:
     loop: 1
   - name: Teleport
     clip: {fileID: 8300000, guid: d1bd16c7ed1b1f84bab00ce115e431c9, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0
+  - name: Collect
+    clip: {fileID: 8300000, guid: 404f2226df14ff84e9a1f8f2a8d54994, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
