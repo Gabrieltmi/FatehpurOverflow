@@ -41,6 +41,20 @@ public class ButtonsMenu : MonoBehaviour
 	{
 		PlayerPrefs.DeleteKey("PlayedTutorial");
 		SceneManager.LoadScene("Hub");
+		if(PlayerPrefs.HasKey("ActualQuantityLevel1"))
+		{
+			PlayerPrefs.DeleteKey("ActualQuantityLevel1");
+
+			if (PlayerPrefs.HasKey("ActualQuantityLevel2"))
+			{
+				PlayerPrefs.DeleteKey("ActualQuantityLevel2");
+
+				if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
+				{
+					PlayerPrefs.DeleteKey("ActualQuantityLevel3");
+				}
+			}
+		}
 	}
 
 	public void BackButton()

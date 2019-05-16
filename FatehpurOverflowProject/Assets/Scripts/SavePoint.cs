@@ -20,6 +20,8 @@ public class SavePoint : MonoBehaviour
 
 				Particle.SetActive(true);
 			}
+
+	
 		}
 	
 	}

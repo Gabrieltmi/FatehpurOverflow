@@ -2334,17 +2334,17 @@ PrefabInstance:
     - target: {fileID: 897659683074331611, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.15464
+      value: -43.33
       objectReference: {fileID: 0}
     - target: {fileID: 897659683074331611, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 166.28
+      value: 170.43
       objectReference: {fileID: 0}
     - target: {fileID: 897659683074331611, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 309.14737
+      value: 344.6
       objectReference: {fileID: 0}
     - target: {fileID: 897659683074331611, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
@@ -2385,6 +2385,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286723549, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
+      propertyPath: actualLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286723549, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
+      propertyPath: maxQuantity
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 105188034049062550, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
@@ -4161,18 +4169,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PPSPorta2Janelas
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.00074768
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00049591
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3646
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
       propertyPath: m_LocalPosition.x
       value: 112.53
@@ -4221,6 +4217,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6946da5dbc1c7a4b9bd0ca5d12c3258, type: 2}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00074768
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00049591
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3646
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
 --- !u!1001 &1234290688
@@ -7526,38 +7534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP1Porta2Janelas
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.20214
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.003501892
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.6769867
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.489
@@ -7606,6 +7582,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6946da5dbc1c7a4b9bd0ca5d12c3258, type: 2}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.20214
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.003501892
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6769867
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ff2328a3f14954eb57254643c3dd9a, type: 3}
 --- !u!1001 &2102956651
@@ -7688,18 +7696,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PPSPorta2Janelas (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.00074768
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00049591
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3646
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
       propertyPath: m_LocalPosition.x
       value: 102.49
@@ -7748,6 +7744,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6946da5dbc1c7a4b9bd0ca5d12c3258, type: 2}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00074768
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00049591
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3646
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801b04075f5e13b4fba5efd7b793a894, type: 3}
 --- !u!1001 &2815321823280505518

@@ -9,7 +9,8 @@ public class GotaController : MonoBehaviour
 	[SerializeField]
 	private int maxQuantity;
 	public int actualQuantity;
-	public TextMeshPro counterDoor;
+	private TextMeshPro counterDoor;
+	public int actualLevel;
 
 	private void Awake()
 	{
@@ -32,7 +33,12 @@ public class GotaController : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.E))
 		{
+			if(!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
+			{
+				PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+			}
 			SceneManager.LoadScene(1);
+
 		}
 	}
 

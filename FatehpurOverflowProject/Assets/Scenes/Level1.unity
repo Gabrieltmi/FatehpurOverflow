@@ -12119,6 +12119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
   Particle: {fileID: 2120893450}
+  thisIsHUB: 0
 --- !u!65 &1335772535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15999,6 +16000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 0}
   Particle: {fileID: 1042081699}
+  thisIsHUB: 0
 --- !u!65 &1996539602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17061,6 +17063,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286723549, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
+      propertyPath: actualFase
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
