@@ -5,8 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class ButtonsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	public GameObject mainMenu1;
+	public GameObject mainMenu2;
+	// Start is called before the first frame update
+
+	private void Awake()
+	{
+		if (PlayerPrefs.HasKey("PlayedTutorial"))
+		{
+			if(PlayerPrefs.GetInt("PlayedTutorial") == 1)
+			{
+				mainMenu1.SetActive(false);
+				mainMenu2.SetActive(true);
+			}
+		}
+	}
+
+	void Start()
     {
         
     }
@@ -22,4 +37,27 @@ public class ButtonsMenu : MonoBehaviour
 		SceneManager.LoadScene("Hub");
 	}
 
+	public void StartGameNewGame()
+	{
+		PlayerPrefs.DeleteKey("PlayedTutorial");
+		SceneManager.LoadScene("Hub");
+	}
+
+	public void BackButton()
+	{
+		if (PlayerPrefs.HasKey("PlayedTutorial"))
+		{
+			if (PlayerPrefs.GetInt("PlayedTutorial") == 1)
+			{
+				mainMenu1.SetActive(false);
+				mainMenu2.SetActive(true);
+			}
+		}
+
+		else
+		{
+			mainMenu1.SetActive(true);
+			mainMenu2.SetActive(false);
+		}
+	}
 }

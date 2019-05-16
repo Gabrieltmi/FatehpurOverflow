@@ -203,15 +203,15 @@ MonoBehaviour:
   advancedSettings:
     groundCheckDistance: 0.01
     stickToGroundHelperDistance: 0.5
-    slowDownRate: 0
+    slowDownRate: 5
     shellOffset: 0
   movementSettings:
-    ForwardSpeed: 12
-    BackwardSpeed: 12
-    StrafeSpeed: 12
+    ForwardSpeed: 9
+    BackwardSpeed: 9
+    StrafeSpeed: 9
     RunMultiplier: 1.35
     RunKey: 304
-    JumpForce: 100
+    JumpForce: 135
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -236,6 +236,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    CurrentTargetSpeed: 10
+    CurrentTargetSpeed: 12
   playerCanDoubleJump: 1
   wallJumpSpeed: 8

@@ -7,10 +7,21 @@ public class SavePoint : MonoBehaviour
 	private GameObject deathFloor;
 	public GameObject SpawnPoint;
 	public GameObject Particle;
-
+	public bool thisIsHUB;
+	private bool alreadyActive;
 	private void Awake()
 	{
 		deathFloor = GameObject.Find("DeathFloor");
+		if(PlayerPrefs.HasKey("PlayedTutorial"))
+		{
+			if(PlayerPrefs.GetInt("PlayedTutorial") == 1)
+			{
+				deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = SpawnPoint;
+
+				Particle.SetActive(true);
+			}
+		}
+	
 	}
 
 	// Start is called before the first frame update
@@ -31,9 +42,17 @@ public class SavePoint : MonoBehaviour
 		{
 			if(Input.GetKeyDown(KeyCode.E))
 			{
-				deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = SpawnPoint;
+				if (!alreadyActive)
+				{
+					deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = SpawnPoint;
 
-				Particle.SetActive(true);
+					Particle.SetActive(true);
+					if (thisIsHUB)
+					{
+						PlayerPrefs.SetInt("PlayedTutorial", 1);
+					}
+				}
+				alreadyActive = true;
 			}
 		}
 	}
