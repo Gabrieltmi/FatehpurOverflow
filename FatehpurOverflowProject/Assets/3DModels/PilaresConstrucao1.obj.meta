@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 8fb2b345b7d0f834fa778b318da1054b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface65
+    100002: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface66
+    100004: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface67
+    100006: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface68
+    100008: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface69
+    100010: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface70
+    100012: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface71
+    100014: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface72
+    100016: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface73
+    100018: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface74
+    100020: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_polySurface64_Construcao_01_2:polySurface1
+    100022: Construcao_01_2:Pilares1_Construcao_01_2:polySurface18_Construcao_01_2:polySurface1_polySurface56
+    100024: Construcao_01_2:Pilares1_Construcao_01_2:polySurface19_Construcao_01_2:polySurface1_polySurface55
+    100026: Construcao_01_2:Pilares1_Construcao_01_2:polySurface20_Construcao_01_2:polySurface1_polySurface54
+    100028: Construcao_01_2:Pilares1_Construcao_01_2:polySurface21_Construcao_01_2:polySurface1_polySurface53
+    100030: //RootNode
+    400000: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface65
+    400002: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface66
+    400004: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface67
+    400006: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface68
+    400008: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface69
+    400010: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface70
+    400012: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface71
+    400014: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface72
+    400016: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface73
+    400018: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface74
+    400020: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_polySurface64_Construcao_01_2:polySurface1
+    400022: Construcao_01_2:Pilares1_Construcao_01_2:polySurface18_Construcao_01_2:polySurface1_polySurface56
+    400024: Construcao_01_2:Pilares1_Construcao_01_2:polySurface19_Construcao_01_2:polySurface1_polySurface55
+    400026: Construcao_01_2:Pilares1_Construcao_01_2:polySurface20_Construcao_01_2:polySurface1_polySurface54
+    400028: Construcao_01_2:Pilares1_Construcao_01_2:polySurface21_Construcao_01_2:polySurface1_polySurface53
+    400030: //RootNode
+    2100000: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface65Mat
+    2100002: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface66Mat
+    2100004: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface67Mat
+    2100006: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface68Mat
+    2100008: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface69Mat
+    2100010: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface70Mat
+    2100012: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface71Mat
+    2100014: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface72Mat
+    2100016: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface73Mat
+    2100018: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_Construcao_01_2_polySurface1_polySurface74Mat
+    2100020: Construcao_01_2_Pilares1_Construcao_01_2_polySurface10_polySurface64_Construcao_01_2_polySurface1Mat
+    2100022: Construcao_01_2_Pilares1_Construcao_01_2_polySurface18_Construcao_01_2_polySurface1_polySurface56Mat
+    2100024: Construcao_01_2_Pilares1_Construcao_01_2_polySurface19_Construcao_01_2_polySurface1_polySurface55Mat
+    2100026: Construcao_01_2_Pilares1_Construcao_01_2_polySurface20_Construcao_01_2_polySurface1_polySurface54Mat
+    2100028: Construcao_01_2_Pilares1_Construcao_01_2_polySurface21_Construcao_01_2_polySurface1_polySurface53Mat
+    2300000: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface65
+    2300002: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface66
+    2300004: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface67
+    2300006: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface68
+    2300008: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface69
+    2300010: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface70
+    2300012: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface71
+    2300014: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface72
+    2300016: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface73
+    2300018: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface74
+    2300020: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_polySurface64_Construcao_01_2:polySurface1
+    2300022: Construcao_01_2:Pilares1_Construcao_01_2:polySurface18_Construcao_01_2:polySurface1_polySurface56
+    2300024: Construcao_01_2:Pilares1_Construcao_01_2:polySurface19_Construcao_01_2:polySurface1_polySurface55
+    2300026: Construcao_01_2:Pilares1_Construcao_01_2:polySurface20_Construcao_01_2:polySurface1_polySurface54
+    2300028: Construcao_01_2:Pilares1_Construcao_01_2:polySurface21_Construcao_01_2:polySurface1_polySurface53
+    3300000: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface65
+    3300002: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface66
+    3300004: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface67
+    3300006: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface68
+    3300008: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface69
+    3300010: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface70
+    3300012: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface71
+    3300014: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface72
+    3300016: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface73
+    3300018: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface74
+    3300020: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_polySurface64_Construcao_01_2:polySurface1
+    3300022: Construcao_01_2:Pilares1_Construcao_01_2:polySurface18_Construcao_01_2:polySurface1_polySurface56
+    3300024: Construcao_01_2:Pilares1_Construcao_01_2:polySurface19_Construcao_01_2:polySurface1_polySurface55
+    3300026: Construcao_01_2:Pilares1_Construcao_01_2:polySurface20_Construcao_01_2:polySurface1_polySurface54
+    3300028: Construcao_01_2:Pilares1_Construcao_01_2:polySurface21_Construcao_01_2:polySurface1_polySurface53
+    4300000: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface65
+    4300002: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface66
+    4300004: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface67
+    4300006: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface68
+    4300008: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface69
+    4300010: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface70
+    4300012: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface71
+    4300014: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface72
+    4300016: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface73
+    4300018: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_Construcao_01_2:polySurface1_polySurface74
+    4300020: Construcao_01_2:Pilares1_Construcao_01_2:polySurface10_polySurface64_Construcao_01_2:polySurface1
+    4300022: Construcao_01_2:Pilares1_Construcao_01_2:polySurface18_Construcao_01_2:polySurface1_polySurface56
+    4300024: Construcao_01_2:Pilares1_Construcao_01_2:polySurface19_Construcao_01_2:polySurface1_polySurface55
+    4300026: Construcao_01_2:Pilares1_Construcao_01_2:polySurface20_Construcao_01_2:polySurface1_polySurface54
+    4300028: Construcao_01_2:Pilares1_Construcao_01_2:polySurface21_Construcao_01_2:polySurface1_polySurface53
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.6
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
