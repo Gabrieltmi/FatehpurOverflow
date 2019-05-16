@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897659683074331611}
   - component: {fileID: 286723549}
+  - component: {fileID: 3291131626539439821}
   m_Layer: 0
   m_Name: PortaoFinal
   m_TagString: Untagged
@@ -44,8 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ffb09ba01d44cd08a4fb3ffecb0dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxQuantity: 10
+  maxQuantity: 21
   actualQuantity: 0
+  counterDoor: {fileID: 0}
+--- !u!65 &3291131626539439821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286723548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 6.51474}
+  m_Center: {x: -10.71, y: 0, z: 36.50737}
 --- !u!1 &8118601547538724006
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +72,7 @@ GameObject:
   - component: {fileID: 4949157785003731085}
   - component: {fileID: 615363826043207120}
   - component: {fileID: 105188034049062550}
+  - component: {fileID: 8616935411921091849}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -72,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8118601547538724006}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.73, y: -4.1608, z: 33.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897659683074331611}
@@ -103,7 +119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e15bff83275c5e049a960c6d376c23d0, type: 3}
+  - {fileID: 2100000, guid: e6946da5dbc1c7a4b9bd0ca5d12c3258, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,3 +139,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8616935411921091849
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118601547538724006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: e15bff83275c5e049a960c6d376c23d0, type: 3}

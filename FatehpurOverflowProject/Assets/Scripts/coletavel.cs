@@ -21,6 +21,7 @@ public class coletavel : MonoBehaviour
 		if(col.CompareTag("Player"))
 		{
             gotaController.actualQuantity += 1;
+			gotaController.UpdateCounterText();
 			Destroy(this.gameObject);
 		}
 	}
