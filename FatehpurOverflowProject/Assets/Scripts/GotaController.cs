@@ -35,7 +35,16 @@ public class GotaController : MonoBehaviour
 		{
 			if(!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
 			{
-				PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+				PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+			}
+
+			else
+			{
+				if(PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel) < actualQuantity )
+				{
+
+					PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+				}
 			}
 			SceneManager.LoadScene(1);
 

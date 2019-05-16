@@ -7,13 +7,14 @@ public class ButtonsMenu : MonoBehaviour
 {
 	public GameObject mainMenu1;
 	public GameObject mainMenu2;
+
 	// Start is called before the first frame update
 
 	private void Awake()
 	{
 		if (PlayerPrefs.HasKey("PlayedTutorial"))
 		{
-			if(PlayerPrefs.GetInt("PlayedTutorial") == 1)
+			if (PlayerPrefs.GetInt("PlayedTutorial") == 1)
 			{
 				mainMenu1.SetActive(false);
 				mainMenu2.SetActive(true);
@@ -22,15 +23,15 @@ public class ButtonsMenu : MonoBehaviour
 	}
 
 	void Start()
-    {
-        
-    }
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+
+	}
 
 	public void StartGame()
 	{
@@ -41,19 +42,19 @@ public class ButtonsMenu : MonoBehaviour
 	{
 		PlayerPrefs.DeleteKey("PlayedTutorial");
 		SceneManager.LoadScene("Hub");
-		if(PlayerPrefs.HasKey("ActualQuantityLevel1"))
+		if (PlayerPrefs.HasKey("ActualQuantityLevel1"))
 		{
 			PlayerPrefs.DeleteKey("ActualQuantityLevel1");
 
-			if (PlayerPrefs.HasKey("ActualQuantityLevel2"))
-			{
-				PlayerPrefs.DeleteKey("ActualQuantityLevel2");
+		}
+		if (PlayerPrefs.HasKey("ActualQuantityLevel2"))
+		{
+			PlayerPrefs.DeleteKey("ActualQuantityLevel2");
+		}
 
-				if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
-				{
-					PlayerPrefs.DeleteKey("ActualQuantityLevel3");
-				}
-			}
+		if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
+		{
+			PlayerPrefs.DeleteKey("ActualQuantityLevel3");
 		}
 	}
 

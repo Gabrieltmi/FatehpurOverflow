@@ -22,14 +22,18 @@ public class CameraFollow : MonoBehaviour {
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
 
+	private void Awake()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	}
 
 	// Use this for initialization
 	void Start () {
 		Vector3 rot = transform.localRotation.eulerAngles;
 		rotY = rot.y;
 		rotX = rot.x;
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+	
 	}
 	
 	// Update is called once per frame

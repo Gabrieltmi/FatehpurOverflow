@@ -12,6 +12,8 @@ public class SavePoint : MonoBehaviour
 	private void Awake()
 	{
 		deathFloor = GameObject.Find("DeathFloor");
+
+		if(thisIsHUB)
 		if(PlayerPrefs.HasKey("PlayedTutorial"))
 		{
 			if(PlayerPrefs.GetInt("PlayedTutorial") == 1)
