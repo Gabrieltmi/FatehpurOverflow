@@ -1324,7 +1324,7 @@ PrefabInstance:
     - target: {fileID: 7926881461305576509, guid: c05f3df9e39894941b1e5d539b5e22a7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -14.92
       objectReference: {fileID: 0}
     - target: {fileID: 7926881460870017000, guid: c05f3df9e39894941b1e5d539b5e22a7,
         type: 3}
@@ -1350,6 +1350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -4.47287
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926881461442030466, guid: c05f3df9e39894941b1e5d539b5e22a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c05f3df9e39894941b1e5d539b5e22a7, type: 3}
@@ -3254,14 +3259,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286723548, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
+      propertyPath: m_Name
+      value: PortaoFinal
+      objectReference: {fileID: 0}
     - target: {fileID: 8351739775115101754, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 286723548, guid: 867da8247808d794fa540638e6f3f07c, type: 3}
-      propertyPath: m_Name
-      value: PortaoFinal
       objectReference: {fileID: 0}
     - target: {fileID: 897659683074331611, guid: 867da8247808d794fa540638e6f3f07c,
         type: 3}
