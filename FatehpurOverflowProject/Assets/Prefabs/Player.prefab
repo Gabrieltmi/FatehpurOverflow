@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancedSettings:
-    groundCheckDistance: 0.03
+    groundCheckDistance: 0.05
     stickToGroundHelperDistance: 0.5
     slowDownRate: 5
     shellOffset: 0

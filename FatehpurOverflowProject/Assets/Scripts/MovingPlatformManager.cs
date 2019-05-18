@@ -30,7 +30,7 @@ public class MovingPlatformManager : MonoBehaviour {
 
 		this.transform.position = Vector3.MoveTowards (this.transform.position, currentPoint.position, moveSpeed * Time.deltaTime);
 
-		if (this.transform.position == currentPoint.position)
+		if ((this.transform.position - currentPoint.position).magnitude <= 0.1f)
 			pointSelected++;
 
 		if (pointSelected == points.Length)
@@ -64,5 +64,6 @@ public class MovingPlatformManager : MonoBehaviour {
 		if (collision.gameObject.CompareTag("Player"))
 			collision.transform.SetParent(null);
 	}
+
 
 }

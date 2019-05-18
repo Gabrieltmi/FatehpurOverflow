@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -132,6 +133,11 @@ public class CharacterMovement : MonoBehaviour
 			audioManager.PlaySound("Steps");
 			alreadyplayed = true;
 		}
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(1);
+        }
 	}
 
 
