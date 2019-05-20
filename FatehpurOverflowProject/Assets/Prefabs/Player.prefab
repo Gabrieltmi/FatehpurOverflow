@@ -201,14 +201,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advancedSettings:
-    groundCheckDistance: 0.05
+    groundCheckDistance: 0.3
     stickToGroundHelperDistance: 0.5
-    slowDownRate: 5
+    slowDownRate: 0.1
     shellOffset: 0
   movementSettings:
-    ForwardSpeed: 9
-    BackwardSpeed: 9
-    StrafeSpeed: 9
+    ForwardSpeed: 8
+    BackwardSpeed: 8
+    StrafeSpeed: 8
     RunMultiplier: 1.35
     RunKey: 304
     JumpForce: 135
@@ -237,5 +237,8 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     CurrentTargetSpeed: 12
+    horizontalInputName: Horizontal
+    verticalInputName: Vertical
+    charController: {fileID: 0}
   playerCanDoubleJump: 1
-  wallJumpSpeed: 8
+  wallJumpSpeed: 15

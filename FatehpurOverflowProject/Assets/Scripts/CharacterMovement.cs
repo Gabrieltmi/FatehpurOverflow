@@ -16,6 +16,9 @@ public class CharacterMovement : MonoBehaviour
 		public float JumpForce = 30f;
 		public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
 		[HideInInspector] public float CurrentTargetSpeed = 8f;
+		public string horizontalInputName;
+		public string verticalInputName;
+		public CharacterController charController;
 
 #if !MOBILE_INPUT
 		private bool m_Running;
@@ -111,6 +114,10 @@ public class CharacterMovement : MonoBehaviour
 		{ return movementSettings.Running; }
 	}
 
+	private void Awake()
+	{
+	
+	}
 
 	private void Start()
 	{
@@ -122,7 +129,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Update()
 	{
-
+		Debug.Log(m_IsGrounded);
 		if (Input.GetButtonDown("Jump") && !m_Jump)
 		{
 			m_Jump = true;
@@ -132,6 +139,12 @@ public class CharacterMovement : MonoBehaviour
 		{
 			audioManager.PlaySound("Steps");
 			alreadyplayed = true;
+		}
+
+		if (!isWalking && alreadyplayed)
+		{
+			audioManager.StopSound("Steps");
+			alreadyplayed = false;
 		}
 
         if(Input.GetKeyDown(KeyCode.P))
@@ -159,7 +172,7 @@ public class CharacterMovement : MonoBehaviour
 	private void StickToGroundHelper()
 	{
 		RaycastHit hitInfo;
-		if (Physics.SphereCast(transform.position, m_Capsule.radius * (1.0f - advancedSettings.shellOffset), Vector3.down, out hitInfo,
+		if (Physics.SphereCast(transform.position, m_Capsule.radius * (0.5f - advancedSettings.shellOffset), Vector3.down, out hitInfo,
 							   ((m_Capsule.height / 2f) - m_Capsule.radius) +
 							   advancedSettings.stickToGroundHelperDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
 		{
@@ -209,9 +222,10 @@ public class CharacterMovement : MonoBehaviour
 
 	private void MovimentAndJumpController()
 	{
-		//Moviment
-
 		Vector2 input = GetInput();
+		//Moviment
+		/*
+		
 
 		if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && !isWallJumping)
 		{
@@ -248,8 +262,8 @@ public class CharacterMovement : MonoBehaviour
 			alreadyplayed = false;
 
 		}
-
-        /*
+		*/
+		/*
 		else if (m_IsGrounded)
 
 		{
@@ -264,6 +278,29 @@ public class CharacterMovement : MonoBehaviour
 			}
 		}
         */
+		// Moviment2
+
+
+		float horizInput = Input.GetAxis(movementSettings.horizontalInputName) * movementSettings.CurrentTargetSpeed;
+		float vertInput = Input.GetAxis(movementSettings.verticalInputName) * movementSettings.CurrentTargetSpeed;
+
+		Vector3 forwardMovement = transform.forward * vertInput;
+		Vector3 rightMovement = transform.right * horizInput;
+
+		this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
+		//movementSettings.charController.SimpleMove(forwardMovement + rightMovement);
+		if(m_IsGrounded)
+		{
+			if (vertInput != 0 || horizInput != 0)
+			{
+				isWalking = true;
+			}
+			else
+			{
+				isWalking = false;
+			}
+		}
+
 		// Jump 
 
 		if (m_IsGrounded)
@@ -274,6 +311,7 @@ public class CharacterMovement : MonoBehaviour
 
 			if (m_Jump)
 			{
+				isWalking = false;
 				m_RigidBody.drag = 1f;
 				//m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
 				m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);

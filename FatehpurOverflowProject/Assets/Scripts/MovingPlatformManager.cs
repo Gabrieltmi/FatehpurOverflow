@@ -54,16 +54,16 @@ public class MovingPlatformManager : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision other)	{
+	void OnTriggerEnter(Collider other)	{
 		if (other.gameObject.CompareTag("Player"))
 			other.transform.SetParent(this.GetComponent<Transform>());
 	}
 
-	private void OnCollisionExit(Collision collision)
-	{
-		if (collision.gameObject.CompareTag("Player"))
-			collision.transform.SetParent(null);
-	}
 
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+			other.transform.SetParent(null);
+	}
 
 }
