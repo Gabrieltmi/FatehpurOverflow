@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle attractor 004 soft noise
       objectReference: {fileID: 0}
+    - target: {fileID: 1381578670569680, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4464049261291580, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.53
@@ -333,10 +337,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4409300857844766, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4538468462145504, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.63
@@ -344,6 +344,10 @@ PrefabInstance:
     - target: {fileID: 4538468462145504, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409300857844766, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1799754637623024, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_Icon
