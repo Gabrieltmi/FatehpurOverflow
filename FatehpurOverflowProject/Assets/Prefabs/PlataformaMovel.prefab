@@ -98,6 +98,7 @@ MonoBehaviour:
   - {fileID: 8134461569081582838}
   - {fileID: 8134461569464422149}
   isPressed: 1
+  timeStopped: 2
 --- !u!65 &6197357209141588931
 BoxCollider:
   m_ObjectHideFlags: 0

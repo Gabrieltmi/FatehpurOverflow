@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SaveHUB : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class SaveHUB : MonoBehaviour
 	private TextMeshPro level3Counter;
 	[SerializeField]
 	private GameObject thanksMenu;
+    public GameObject options;
 
 	private void Awake()
 	{
@@ -61,6 +63,23 @@ public class SaveHUB : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+        Time.timeScale = 1;
 	}
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            options.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    public void MainMenuButton()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
 }

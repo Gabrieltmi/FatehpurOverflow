@@ -6,11 +6,13 @@ public class coletavel : MonoBehaviour
 {
     private GotaController gotaController;
 	AudioManager audioManager;
+    public GameObject particle;
 
     private void Awake()
     {
         gotaController = GameObject.Find("PortaoFinal").GetComponent<GotaController>();
 		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+       
 	}
     // Update is called once per frame
     void Update()
@@ -25,8 +27,9 @@ public class coletavel : MonoBehaviour
             gotaController.actualQuantity += 1;
 			gotaController.UpdateCounterText();
 			audioManager.PlaySound("Collect");
-			Destroy(this.gameObject);
+            GameObject x = Instantiate(particle, col.transform.position, Quaternion.identity);
+            x.transform.SetParent(col.transform);
+            Destroy(this.gameObject);
 		}
 	}
-
 }
