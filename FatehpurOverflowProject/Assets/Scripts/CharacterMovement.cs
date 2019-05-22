@@ -92,6 +92,7 @@ public class CharacterMovement : MonoBehaviour
 	private AudioManager audioManager;
 	private bool isWalking;
 	private bool alreadyplayed;
+	Vector3 lastMoviment = Vector3.zero;
 
 	public Vector3 Velocity
 	{
@@ -116,7 +117,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Awake()
 	{
-	
+
 	}
 
 	private void Start()
@@ -129,7 +130,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Update()
 	{
-		Debug.Log(m_IsGrounded);
+
 		if (Input.GetButtonDown("Jump") && !m_Jump)
 		{
 			m_Jump = true;
@@ -147,10 +148,10 @@ public class CharacterMovement : MonoBehaviour
 			alreadyplayed = false;
 		}
 
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(1);
-        }
+		if (Input.GetKeyDown(KeyCode.P))
+		{
+			SceneManager.LoadScene(1);
+		}
 	}
 
 
@@ -283,14 +284,17 @@ public class CharacterMovement : MonoBehaviour
 
 		float horizInput = Input.GetAxis(movementSettings.horizontalInputName) * movementSettings.CurrentTargetSpeed;
 		float vertInput = Input.GetAxis(movementSettings.verticalInputName) * movementSettings.CurrentTargetSpeed;
-
 		Vector3 forwardMovement = transform.forward * vertInput;
 		Vector3 rightMovement = transform.right * horizInput;
 
-		this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
+
+
+
+
 		//movementSettings.charController.SimpleMove(forwardMovement + rightMovement);
-		if(m_IsGrounded)
+		if (m_IsGrounded)
 		{
+			this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
 			if (vertInput != 0 || horizInput != 0)
 			{
 				isWalking = true;
@@ -300,6 +304,8 @@ public class CharacterMovement : MonoBehaviour
 				isWalking = false;
 			}
 		}
+		else
+			isWalking = false;
 
 		// Jump 
 
@@ -311,6 +317,7 @@ public class CharacterMovement : MonoBehaviour
 
 			if (m_Jump)
 			{
+				lastMoviment = (forwardMovement + rightMovement);
 				isWalking = false;
 				m_RigidBody.drag = 1f;
 				//m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
@@ -323,9 +330,21 @@ public class CharacterMovement : MonoBehaviour
 			{
 				m_RigidBody.Sleep();
 			}
+
 		}
 		else
 		{
+
+			if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.85f || Mathf.Abs(Input.GetAxis("Horizontal")) > 0.85f)
+			{
+				this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
+				lastMoviment = (forwardMovement + rightMovement);
+			}
+			else
+			{
+				this.transform.position += lastMoviment * Time.deltaTime ;
+			}
+
 			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
 			{
 				m_RigidBody.drag = 1f;
@@ -363,6 +382,5 @@ public class CharacterMovement : MonoBehaviour
 			}
 		}
 	}
-
 }
 

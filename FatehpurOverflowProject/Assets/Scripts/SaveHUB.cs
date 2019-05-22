@@ -17,9 +17,11 @@ public class SaveHUB : MonoBehaviour
 	[SerializeField]
 	private GameObject thanksMenu;
     public GameObject options;
+	private AudioManager audioManager;
 
 	private void Awake()
 	{
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		player = GameObject.Find("Player");
 		if (PlayerPrefs.HasKey("PlayedTutorial"))
 		{
@@ -81,5 +83,6 @@ public class SaveHUB : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+		audioManager.StopSound("WindDesert");
     }
 }

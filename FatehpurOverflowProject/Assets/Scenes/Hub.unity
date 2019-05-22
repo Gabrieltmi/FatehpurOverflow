@@ -4610,7 +4610,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15040
+  m_Name: pb_Mesh17872
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -10737,7 +10737,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15128
+  m_Name: pb_Mesh18024
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -19677,6 +19677,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
+        type: 3}
+      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].time
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
+        type: 3}
+      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
+        type: 3}
+      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].time
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
+        type: 3}
+      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f414a03ab30a0f44be4d129e23193af, type: 3}
