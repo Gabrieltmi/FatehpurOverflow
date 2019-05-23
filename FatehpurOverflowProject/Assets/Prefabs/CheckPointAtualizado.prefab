@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538468462145504, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 4538468462145504, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -347,13 +347,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4409300857844766, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1799754637623024, guid: bac8a02a8034dd041a67dd89de9fb2fd, type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 198258429934786062, guid: bac8a02a8034dd041a67dd89de9fb2fd,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 114063111365274996, guid: bac8a02a8034dd041a67dd89de9fb2fd,
         type: 3}
       propertyPath: target
