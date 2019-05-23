@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c07de831f8b249e45af91fd1bd061a25
+guid: 813aff4bd446f1a49b45b0b15f53e79f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder1
+    100002: polySurface5
     400000: //RootNode
-    400002: pCylinder1
-    2100000: pCylinder1Mat
-    2300000: pCylinder1
-    3300000: pCylinder1
-    4300000: pCylinder1
+    400002: polySurface5
+    2100000: polySurface5Mat
+    2300000: polySurface5
+    3300000: polySurface5
+    4300000: polySurface5
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -42,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
