@@ -33,24 +33,26 @@ public class GotaController : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (Input.GetKeyDown(KeyCode.E))
+		if (other.CompareTag("Player"))
 		{
-			if(!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
+			if (Input.GetKeyDown(KeyCode.E))
 			{
-				PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
-			}
-
-			else
-			{
-				if(PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel) < actualQuantity )
+				if (!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
 				{
-
 					PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
 				}
-			}
-			SceneManager.LoadScene(1);
-			audioData.Play();
 
+				else
+				{
+					if (PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel) < actualQuantity)
+					{
+
+						PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+					}
+				}
+				SceneManager.LoadScene(1);
+				audioData.Play();
+			}
 		}
 	}
 

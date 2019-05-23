@@ -382,6 +382,11 @@ public class CharacterMovement : MonoBehaviour
 				audioManager.PlaySound("Jump2");
 			}
 		}
+
+		if (collision.contacts[0].normal.y < 0.5f)
+		{
+
+		}
 	}
 }
 
