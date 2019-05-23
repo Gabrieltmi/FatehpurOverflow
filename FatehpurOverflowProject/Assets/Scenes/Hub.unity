@@ -10473,8 +10473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712109125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0103, y: 8.7643, z: 91.29}
-  m_LocalScale: {x: 6.701139, y: 9.394827, z: 9.230297}
+  m_LocalPosition: {x: 6.618, y: 8.7643, z: 91.29}
+  m_LocalScale: {x: 5.488233, y: 9.394827, z: 9.230297}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -11535,8 +11535,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097100647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1282, y: 8.7643, z: 91.29}
-  m_LocalScale: {x: 6.701139, y: 9.394827, z: 9.230297}
+  m_LocalPosition: {x: -6.743, y: 8.7643, z: 91.29}
+  m_LocalScale: {x: 5.468129, y: 9.394827, z: 9.230297}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -19677,26 +19677,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
-        type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].time
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
-        type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
-        type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].time
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038880836178372616, guid: 4f414a03ab30a0f44be4d129e23193af,
-        type: 3}
-      propertyPath: movementSettings.SlopeCurveModifier.m_Curve.Array.data[1].value
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f414a03ab30a0f44be4d129e23193af, type: 3}

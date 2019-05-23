@@ -334,17 +334,18 @@ public class CharacterMovement : MonoBehaviour
 		}
 		else
 		{
-
-			if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.85f || Mathf.Abs(Input.GetAxis("Horizontal")) > 0.85f)
+			if (!isWallJumping)
 			{
-				this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
-				lastMoviment = (forwardMovement + rightMovement);
+				if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.8f || Mathf.Abs(Input.GetAxis("Horizontal")) > 0.8f)
+				{
+					this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
+					lastMoviment = (forwardMovement + rightMovement);
+				}
+				else
+				{
+					this.transform.position += lastMoviment * Time.deltaTime;
+				}
 			}
-			else
-			{
-				this.transform.position += lastMoviment * Time.deltaTime ;
-			}
-
 			if (playerCanDoubleJump && !alreadyJumped && m_Jump)
 			{
 				m_RigidBody.drag = 1f;
