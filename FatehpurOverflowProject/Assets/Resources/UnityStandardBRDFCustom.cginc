@@ -12,6 +12,7 @@ half4 BRDF_Unity_Toon(half3 diffColor, half3 specColor, half oneMinusReflectivit
 	half nh = saturate(dot(normal, halfDir));
 	half nv = saturate(dot(normal, viewDir));
 	half lh = saturate(dot(light.dir, halfDir));
+	//half lh = saturate(dot(normal, light.dir));
 
 	// Specular term
 	half perceptualRoughness = SmoothnessToPerceptualRoughness(smoothness);

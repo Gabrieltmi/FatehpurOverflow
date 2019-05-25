@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2815321822682824536}
   - component: {fileID: 2815321822682824539}
   - component: {fileID: 2815321822682824538}
-  - component: {fileID: 2815321822682824541}
+  - component: {fileID: 946167575429210070}
   m_Layer: 0
   m_Name: PlataformaFixa
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2815321822682824540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 145.17, y: 13.932, z: -77.200005}
-  m_LocalScale: {x: 9.044546, y: 1, z: 6.3704586}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2815321822682824540}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: f4c0a83cc51424a2d9f660712d98d0b2, type: 3}
 --- !u!23 &2815321822682824538
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 00e893a893974469c8264029f434f309, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,16 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2815321822682824541
+--- !u!65 &946167575429210070
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2815321822682824540}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.568226, y: 2.195795, z: 5.46594}
+  m_Center: {x: 0.0000017881393, y: -0.6470184, z: 0.0000011920929}
