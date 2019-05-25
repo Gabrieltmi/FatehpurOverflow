@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d5aff35ffa5924744966cb5c8f997d87
+guid: c497ab51f4740194ab0ff91b4963d0d2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: initialShadingGroup_pCube9
-    100002: //RootNode
-    400000: initialShadingGroup_pCube9
-    400002: //RootNode
-    2100000: initialShadingGroup_pCube9Mat
-    2300000: initialShadingGroup_pCube9
-    3300000: initialShadingGroup_pCube9
-    4300000: initialShadingGroup_pCube9
+    100000: //RootNode
+    100002: Cliff:Mesh
+    400000: //RootNode
+    400002: Cliff:Mesh
+    2100000: Cliff_MeshMat
+    2300000: Cliff:Mesh
+    3300000: Cliff:Mesh
+    4300000: Cliff:Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
