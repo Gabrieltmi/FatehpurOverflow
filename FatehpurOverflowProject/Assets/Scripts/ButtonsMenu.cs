@@ -56,6 +56,14 @@ public class ButtonsMenu : MonoBehaviour
 		{
 			PlayerPrefs.DeleteKey("ActualQuantityLevel3");
 		}
+
+		for (int i = 0; i < 5; i++)
+		{
+			if(PlayerPrefs.HasKey("Dialogo" + i))
+			{
+				PlayerPrefs.DeleteKey("Dialogo" + i);
+			}
+		}
 	}
 
 	public void BackButton()

@@ -93,6 +93,13 @@ public class CharacterMovement : MonoBehaviour
 	private bool isWalking;
 	private bool alreadyplayed;
 	Vector3 lastMoviment = Vector3.zero;
+	private Transform cameraT;
+	public float turnSmoothTime = 0.2f;
+	float turnSmoothVelocity;
+	private bool running = false;
+	public float speedSmoothTime = 0.1f;
+	float speedSmoothVelocity;
+	float currentSpeed;
 
 	public Vector3 Velocity
 	{
@@ -117,7 +124,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Awake()
 	{
-
+		cameraT = GameObject.FindGameObjectWithTag("MainCamera").transform;
 	}
 
 	private void Start()
@@ -287,14 +294,27 @@ public class CharacterMovement : MonoBehaviour
 		Vector3 forwardMovement = transform.forward * vertInput;
 		Vector3 rightMovement = transform.right * horizInput;
 
+		Vector2 inputa = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+		Vector2 inputDir = inputa.normalized;
 
 
+		running = Input.GetKey(KeyCode.LeftShift);
+		float targetSpeed = movementSettings.CurrentTargetSpeed * inputDir.magnitude;
+		currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
+
+	
+
+		if (inputDir != Vector2.zero)
+		{
+			float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
+			transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+		}
 
 
-		//movementSettings.charController.SimpleMove(forwardMovement + rightMovement);
 		if (m_IsGrounded)
 		{
-			this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
+			//this.transform.position += targetSpeed * Camera.main.transform.forward * Time.deltaTime;
+			transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 			if (vertInput != 0 || horizInput != 0)
 			{
 				isWalking = true;
@@ -334,16 +354,17 @@ public class CharacterMovement : MonoBehaviour
 		}
 		else
 		{
+			
 			if (!isWallJumping)
 			{
 				if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.8f || Mathf.Abs(Input.GetAxis("Horizontal")) > 0.8f)
 				{
-					this.transform.position += (forwardMovement + rightMovement) * Time.deltaTime;
-					lastMoviment = (forwardMovement + rightMovement);
+					transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+					lastMoviment = transform.forward * currentSpeed;
 				}
 				else
 				{
-					this.transform.position += lastMoviment * Time.deltaTime;
+					transform.Translate(lastMoviment * Time.deltaTime, Space.World);
 				}
 			}
 			if (playerCanDoubleJump && !alreadyJumped && m_Jump)

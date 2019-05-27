@@ -50,7 +50,7 @@ public class CameraFollow : MonoBehaviour {
 
 		Quaternion localRotation = Quaternion.Euler (rotY, rotX, 0.0f);
 		transform.rotation = localRotation;
-		playerBody.Rotate(Vector3.up * mouseX);
+		//playerBody.Rotate(Vector3.up * mouseX);
 
 	}
 
