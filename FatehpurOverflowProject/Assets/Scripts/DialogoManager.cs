@@ -13,13 +13,18 @@ public class DialogoManager : MonoBehaviour
 	public int[] numeroDialogo;
 	public int[] timeTexts;
 	public bool useOnlyOneTime;
-	public EmirMovement callMethods;
+	public MitraMovement callMethods;
 	public GameObject spawnHub;
 	[SerializeField]
 	private bool canCallLevel1;
 	[SerializeField]
 	private bool canOpenPortal1;
-	
+	[SerializeField]
+	private bool canGoAfterLevel1;
+	[SerializeField]
+	private bool canGoMiddle;
+	[SerializeField]
+	private bool canGoToLevel2;
 
 	private void Awake()
 	{
@@ -68,6 +73,19 @@ public class DialogoManager : MonoBehaviour
 		if(canOpenPortal1)
 		{
 			callMethods.canOpenPortal1 = true;
+		}
+		if(canGoAfterLevel1)
+		{
+			callMethods.canGoAfterLevel1 = true;
+		}
+		if(canGoMiddle)
+		{
+			callMethods.goMiddle = true;
+		}
+
+		if(canGoToLevel2)
+		{
+			callMethods.canGoToLevel2 = true;
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
 	}

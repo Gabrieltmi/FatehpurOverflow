@@ -21,6 +21,8 @@ public class SaveHUB : MonoBehaviour
 	[SerializeField]
 	private GameObject[] dialogo;
 
+
+
 	private void Awake()
 	{
 		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -57,7 +59,12 @@ public class SaveHUB : MonoBehaviour
 			}
 		}
 
-
+		if (Global.actualLevel == 1)
+		{
+			dialogo[4].SetActive(true);
+			dialogo[5].SetActive(true);
+		}
+	
 	}
 
 	private void Start()

@@ -5,4 +5,5 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     static public bool isPaused;
+	static public int actualLevel;
 }

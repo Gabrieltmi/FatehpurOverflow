@@ -39,6 +39,7 @@ public class DoorHandler : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.E) && canUse)
 			{
 				SceneManager.LoadScene(sceneToLoad);
+				Global.actualLevel = sceneToLoad - 1;
 			}
 		}
 	}

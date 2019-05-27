@@ -9,6 +9,7 @@ TagManager:
   - SaveTrigger
   - AudioManager
   - Espinhos
+  - Midra
   layers:
   - Default
   - TransparentFX

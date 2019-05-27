@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1335924451424546656}
   - component: {fileID: 4901583611196006827}
   m_Layer: 0
-  m_Name: Midra
+  m_Name: Mitra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,11 +95,29 @@ MonoBehaviour:
   maxDistToMove: 2
   isFollowing: 0
   canFollowThePlayer: 0
+  Water: {fileID: 0}
   firstDestination: {fileID: 0}
   portal1Destination: {fileID: 0}
+  portal2Destination: {fileID: 0}
+  afterOpenPortal: {fileID: 0}
+  afterLevel1: {fileID: 0}
+  midPos: {fileID: 0}
+  midAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   canGoToLevel1: 0
+  canGoToLevel2: 0
   canOpenPortal1: 0
+  canOpenPortal2: 0
+  canGoAfterLevel1: 0
+  goMiddle: 0
   door1: {fileID: 0}
+  door2: {fileID: 0}
+  dialogoPortal1: {fileID: 0}
+  dialogoPortal2: {fileID: 0}
+  dialogo7: {fileID: 0}
 --- !u!1 &6829300287557109975
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +129,7 @@ GameObject:
   - component: {fileID: 5514097345333745185}
   - component: {fileID: 9170900152217484310}
   m_Layer: 0
-  m_Name: MidraAnim
+  m_Name: MitraAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
