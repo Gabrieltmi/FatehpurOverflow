@@ -63,6 +63,13 @@ public class SaveHUB : MonoBehaviour
 		{
 			dialogo[4].SetActive(true);
 			dialogo[5].SetActive(true);
+			dialogo[6].SetActive(true);
+			dialogo[7].SetActive(true);
+		}
+		if(Global.actualLevel == 2)
+		{
+			dialogo[8].SetActive(true);
+			dialogo[9].SetActive(true);
 		}
 	
 	}

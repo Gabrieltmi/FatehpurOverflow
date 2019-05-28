@@ -13,27 +13,39 @@ public class MitraMovement : MonoBehaviour
 	public WaterMovement water;
 	public GameObject firstDestination;
 	public GameObject secondDestination;
+	public GameObject thirdDestination;
 	public GameObject portal1Destination;
 	public GameObject portal2Destination;
+	public GameObject portal3Destination;
 	public GameObject afterOpenPortal1;
 	public GameObject afterOpenPortal2;
+	public GameObject afterOpenPortal3;
+	public GameObject afterOpenPortal2Hub;
+	public GameObject afterOpenPortal3Hub;
 	public GameObject midPos;
 	public GameObject[] midAnim;
 	public bool canGoToLevel1;
 	public bool canGoToLevel2;
+	public bool canGoToLevel3;
 	public bool canOpenPortal1;
 	public bool canOpenPortal2;
+	public bool canOpenPortal3;
 	public bool canGoAfterLevel1;
+	public bool canGoAfterLevel2;
 	public bool goMiddle;
 	private bool callOneTime1;
 	private bool callOneTime2;
+	private bool callOneTime3;
 	public GameObject door1;
 	public GameObject door2;
+	public GameObject door3;
 	public bool returnToPos1;
 	public bool returnToPos2;
 	public DialogoManager dialogoPortal1;
 	public DialogoManager dialogoPortal2;
+	public DialogoManager dialogoPortal3;
 	public DialogoManager dialogo7;
+	public DialogoManager dialogo10;
 	int x;
 
 	private void Awake()
@@ -50,6 +62,16 @@ public class MitraMovement : MonoBehaviour
 		if (Global.actualLevel == 1)
 		{
 			this.transform.position = afterOpenPortal1.transform.position;
+		}
+
+		else if(Global.actualLevel == 2)
+		{
+			this.transform.position = afterOpenPortal2Hub.transform.position;
+		}
+
+		else if(Global.actualLevel == 3)
+		{
+			this.transform.position = afterOpenPortal3Hub.transform.position;
 		}
 
 	}
@@ -85,6 +107,11 @@ public class MitraMovement : MonoBehaviour
 			GoToLevel2();
 		}
 
+		if(canGoToLevel3)
+		{
+			GoToLevel3();
+		}
+
 		if (canOpenPortal1)
 		{
 			if (!callOneTime1)
@@ -106,6 +133,17 @@ public class MitraMovement : MonoBehaviour
 			OpenPortal(portal2Destination);
 		}
 
+		if(canOpenPortal3)
+		{
+			if (!callOneTime3)
+			{
+				door3.GetComponent<DoorHandler>().UnlockyDoor();
+				StartCoroutine(ReturnAndText(dialogoPortal3, 2));
+				callOneTime3 = true;
+			}
+			OpenPortal(portal3Destination);
+		}
+
 		if (returnToPos1)
 		{
 			ReturnToPos(afterOpenPortal1);
@@ -120,6 +158,11 @@ public class MitraMovement : MonoBehaviour
 		if (canGoAfterLevel1)
 		{
 			CanGoAfterLevel1();
+		}
+
+		if(canGoAfterLevel2)
+		{
+			CanGoAfterLevel2();
 		}
 		
 		if (goMiddle)
@@ -169,9 +212,20 @@ public class MitraMovement : MonoBehaviour
 		}
 	}
 
+
+	void CanGoAfterLevel2()
+	{
+		transform.position = Vector3.MoveTowards(transform.position, midPos.transform.position, speed * Time.deltaTime);
+		if ((this.transform.position - midPos.transform.position).magnitude < 0.1f)
+		{
+			canGoAfterLevel2 = false;
+		}
+	}
+
 	void GoMiddle()
 	{
-		water.level = 1;
+		
+		water.level = Global.actualLevel;
 		if ((this.transform.position - midAnim[x].transform.position).magnitude < 0.1f)
 		{
 			if (x < 3)
@@ -179,8 +233,17 @@ public class MitraMovement : MonoBehaviour
 			else
 			{
 				speed = 7;
-				canGoAfterLevel1 = true;
-				StartCoroutine(dialogo7.DialogoChange());
+				if (Global.actualLevel == 1)
+				{
+					canGoAfterLevel1 = true;
+					StartCoroutine(dialogo7.DialogoChange());
+				}
+				else if (Global.actualLevel == 2)
+				{
+					canGoAfterLevel2 = true;
+					StartCoroutine(dialogo10.DialogoChange());
+				}
+				
 				goMiddle = false;
 			}
 
@@ -189,7 +252,6 @@ public class MitraMovement : MonoBehaviour
 		{
 			speed = 10;
 			transform.position = Vector3.MoveTowards(transform.position, midAnim[x].transform.position, speed * Time.deltaTime);
-
 		}
 	}
 
@@ -202,6 +264,17 @@ public class MitraMovement : MonoBehaviour
 			canGoToLevel2 = false;
 		}
 	}
+
+	void GoToLevel3()
+	{
+		transform.position = Vector3.MoveTowards(transform.position, thirdDestination.transform.position, speed * Time.deltaTime);
+		if ((this.transform.position - thirdDestination.transform.position).magnitude < 0.1f)
+		{
+			canOpenPortal3 = true;
+			canGoToLevel3 = false;
+		}
+	}
+
 	IEnumerator ReturnAndText(DialogoManager diag, int level)
 	{
 		yield return new WaitForSeconds(4);

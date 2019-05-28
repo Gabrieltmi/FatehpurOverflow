@@ -26,6 +26,9 @@ public class DialogoManager : MonoBehaviour
 	private bool canGoMiddle;
 	[SerializeField]
 	private bool canGoToLevel2;
+	[SerializeField]
+	private bool canGoToLevel3;
+
 
 	private void Awake()
 	{
@@ -89,6 +92,11 @@ public class DialogoManager : MonoBehaviour
 		if(canGoToLevel2)
 		{
 			callMethods.canGoToLevel2 = true;
+		}
+
+		if(canGoToLevel3)
+		{
+			callMethods.canGoToLevel3 = true;
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
 	}
