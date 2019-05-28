@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
+	public WaterMovement water;
 	private GameObject deathFloor;
 	public int numberToSetPlayerPrefs;
 	public string[] dialogo;
@@ -81,6 +82,8 @@ public class DialogoManager : MonoBehaviour
 		if(canGoMiddle)
 		{
 			callMethods.goMiddle = true;
+			StartCoroutine(MoveWater());
+
 		}
 
 		if(canGoToLevel2)
@@ -88,5 +91,13 @@ public class DialogoManager : MonoBehaviour
 			callMethods.canGoToLevel2 = true;
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
+	}
+
+	IEnumerator MoveWater()
+	{
+		yield return new WaitForSeconds(2);
+		water.canMoveUp = true;
+		yield return new WaitForSeconds(12);
+		water.canMoveUp = false;
 	}
 }

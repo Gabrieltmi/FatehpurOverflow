@@ -171,6 +171,7 @@ public class MitraMovement : MonoBehaviour
 
 	void GoMiddle()
 	{
+		water.level = 1;
 		if ((this.transform.position - midAnim[x].transform.position).magnitude < 0.1f)
 		{
 			if (x < 3)
@@ -180,7 +181,6 @@ public class MitraMovement : MonoBehaviour
 				speed = 7;
 				canGoAfterLevel1 = true;
 				StartCoroutine(dialogo7.DialogoChange());
-				water.level = 1;
 				goMiddle = false;
 			}
 
@@ -189,6 +189,7 @@ public class MitraMovement : MonoBehaviour
 		{
 			speed = 10;
 			transform.position = Vector3.MoveTowards(transform.position, midAnim[x].transform.position, speed * Time.deltaTime);
+
 		}
 	}
 
@@ -211,4 +212,5 @@ public class MitraMovement : MonoBehaviour
 		yield return new WaitForSeconds(3);
 		StartCoroutine(diag.DialogoChange());
 	}
+
 }

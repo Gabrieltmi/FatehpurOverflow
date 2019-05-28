@@ -1116,9 +1116,9 @@ GameObject:
   - component: {fileID: 285555261}
   - component: {fileID: 285555260}
   - component: {fileID: 285555259}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler3
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,6 +1135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 3
   dialogo:
   - "Varuna aprisionou o meu poder dentro das constru\xE7\xF5es daqui."
@@ -1984,7 +1985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376083715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6849, y: 9.4, z: 215.4402}
+  m_LocalPosition: {x: -1.6849, y: 5.78, z: 215.4402}
   m_LocalScale: {x: 56.449127, y: 1, z: 56.36471}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2007,7 +2008,7 @@ MonoBehaviour:
   - 7.4
   - 9
   - 10.8
-  speed: 6
+  speed: 0.15
   canMoveUp: 0
   level: 0
 --- !u!65 &376083720
@@ -3950,9 +3951,9 @@ GameObject:
   - component: {fileID: 924416767}
   - component: {fileID: 924416766}
   - component: {fileID: 924416765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler8
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3969,6 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 8
   dialogo:
   - Pronto, pode passar.
@@ -4966,9 +4968,9 @@ GameObject:
   - component: {fileID: 1178936412}
   - component: {fileID: 1178936411}
   - component: {fileID: 1178936410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler7
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4985,6 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 7
   dialogo:
   - 
@@ -5727,9 +5730,9 @@ GameObject:
   - component: {fileID: 1404514420}
   - component: {fileID: 1404514419}
   - component: {fileID: 1404514418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler6
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5746,6 +5749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 6
   dialogo:
   - "Vou utilizar esse poder para tentar quebrar a maldi\xE7\xE3o."
@@ -26977,7 +26981,7 @@ GameObject:
   - component: {fileID: 1539084694}
   m_Layer: 0
   m_Name: MeioBoxCollider
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26989,7 +26993,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27002,7 +27006,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27015,7 +27019,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27028,7 +27032,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27041,7 +27045,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27054,7 +27058,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27067,7 +27071,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27080,7 +27084,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539084693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f3765ee91b7731d45a15f5f83f41e9c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -27818,9 +27822,9 @@ GameObject:
   - component: {fileID: 1878766677}
   - component: {fileID: 1878766676}
   - component: {fileID: 1878766674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler4
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27837,6 +27841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 4
   dialogo:
   - "Pronto! Voc\xEA ter\xE1 que entrar sozinho n\xE3o consigo ir por causa da maldi\xE7\xE3o."
@@ -28025,9 +28030,9 @@ GameObject:
   - component: {fileID: 1885747831}
   - component: {fileID: 1885747830}
   - component: {fileID: 1885747829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler5
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28044,6 +28049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 5
   dialogo:
   - "Voc\xEA conseguiu!"
@@ -28165,9 +28171,9 @@ GameObject:
   - component: {fileID: 1916446946}
   - component: {fileID: 1916446945}
   - component: {fileID: 1916446944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler1
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28184,6 +28190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 1
   dialogo:
   - Finalmente conhecerei a cidade que foi abandonada por minha causa
@@ -35991,6 +35998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 0}
   numberToSetPlayerPrefs: 2
   dialogo:
   - "Finalmente garoto, j\xE1 faz um ano que estou te esperando!"
@@ -36038,9 +36046,9 @@ GameObject:
   - component: {fileID: 4879541219728243649}
   - component: {fileID: 4879541219728243650}
   - component: {fileID: 4879541219728243651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DialogoHandler2
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

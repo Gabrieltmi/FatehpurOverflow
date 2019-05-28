@@ -41,8 +41,4 @@ public class WaterMovement : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		canMoveUp = true;
-	}
 }
