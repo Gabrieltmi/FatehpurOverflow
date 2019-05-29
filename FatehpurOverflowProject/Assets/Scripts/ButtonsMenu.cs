@@ -57,7 +57,14 @@ public class ButtonsMenu : MonoBehaviour
 			PlayerPrefs.DeleteKey("ActualQuantityLevel3");
 		}
 
-		for (int i = 0; i < 5; i++)
+		if (PlayerPrefs.HasKey("SetSpawnHub"))
+		{
+			PlayerPrefs.DeleteKey("SetSpawnHub");
+		}
+
+
+
+		for (int i = 0; i < 16; i++)
 		{
 			if(PlayerPrefs.HasKey("Dialogo" + i))
 			{

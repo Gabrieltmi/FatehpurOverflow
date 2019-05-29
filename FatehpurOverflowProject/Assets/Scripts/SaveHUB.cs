@@ -53,18 +53,32 @@ public class SaveHUB : MonoBehaviour
 				dialogo[i].SetActive(false);
 			}
 		}
+		if(!PlayerPrefs.HasKey("PlayedTutorial"))
+		{
+			dialogo[1].SetActive(true);
+			dialogo[2].SetActive(true);
+			dialogo[3].SetActive(true);
+		}
 
-		if (Global.actualLevel == 1)
+
+		if (Global.actualLevel == 1 || PlayerPrefs.GetInt("SetSpawnHub") == 1)
 		{
 			dialogo[4].SetActive(true);
 			dialogo[5].SetActive(true);
 			dialogo[6].SetActive(true);
 			dialogo[7].SetActive(true);
 		}
-		if (Global.actualLevel == 2)
+		if (Global.actualLevel == 2 || PlayerPrefs.GetInt("SetSpawnHub") == 2)
 		{
 			dialogo[8].SetActive(true);
 			dialogo[9].SetActive(true);
+		}
+
+		if (Global.actualLevel == 3 || PlayerPrefs.GetInt("SetSpawnHub") == 3)
+		{
+			dialogo[12].SetActive(true);
+			dialogo[13].SetActive(true);
+			dialogo[14].SetActive(true);
 		}
 
 	}

@@ -158,6 +158,7 @@ public class CharacterMovement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.P))
 		{
 			SceneManager.LoadScene(1);
+			PlayerPrefs.SetInt("SetSpawnHub", Global.actualLevel);
 		}
 	}
 

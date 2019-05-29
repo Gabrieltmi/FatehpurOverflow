@@ -33,6 +33,7 @@ public class MitraMovement : MonoBehaviour
 	public bool canOpenPortal3;
 	public bool canGoAfterLevel1;
 	public bool canGoAfterLevel2;
+	public bool canGoAfterLevel3;
 	public bool goMiddle;
 	private bool callOneTime1;
 	private bool callOneTime2;
@@ -48,6 +49,7 @@ public class MitraMovement : MonoBehaviour
 	public DialogoManager dialogoPortal3;
 	public DialogoManager dialogo7;
 	public DialogoManager dialogo10;
+	public DialogoManager dialogo14;
 	int x;
 
 
@@ -62,17 +64,17 @@ public class MitraMovement : MonoBehaviour
 	{
 		//this.transform.position = follow.transform.position;
 
-		if (Global.actualLevel == 1)
+		if (Global.actualLevel == 1 || PlayerPrefs.GetInt("SetSpawnHub") == 1)
 		{
 			this.transform.position = afterOpenPortal1.transform.position;
 		}
 
-		else if(Global.actualLevel == 2)
+		if(Global.actualLevel == 2 || PlayerPrefs.GetInt("SetSpawnHub") == 2)
 		{
 			this.transform.position = afterOpenPortal2Hub.transform.position;
 		}
 
-		else if(Global.actualLevel == 3)
+		if(Global.actualLevel == 3 || PlayerPrefs.GetInt("SetSpawnHub") == 3)
 		{
 			this.transform.position = afterOpenPortal3Hub.transform.position;
 		}
@@ -243,15 +245,21 @@ public class MitraMovement : MonoBehaviour
 			else
 			{
 				speed = 7;
-				if (Global.actualLevel == 1)
+				if (Global.actualLevel == 1 || PlayerPrefs.GetInt("SetSpawnHub") == 1)
 				{
 					canGoAfterLevel1 = true;
 					StartCoroutine(dialogo7.DialogoChange());
 				}
-				else if (Global.actualLevel == 2)
+				if (Global.actualLevel == 2 || PlayerPrefs.GetInt("SetSpawnHub") == 2)
 				{
 					canGoAfterLevel2 = true;
 					StartCoroutine(dialogo10.DialogoChange());
+				}
+
+				if(Global.actualLevel == 3 || PlayerPrefs.GetInt("SetSpawnHub") == 3)
+				{
+					canGoAfterLevel2 = true;
+					StartCoroutine(dialogo14.DialogoChange());
 				}
 				
 				goMiddle = false;

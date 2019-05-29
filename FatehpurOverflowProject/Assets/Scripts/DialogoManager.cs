@@ -76,7 +76,6 @@ public class DialogoManager : MonoBehaviour
 			PlayerPrefs.SetInt("PlayedTutorial", 1);
 			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[0];
 			mitraMovement.doorNumber = 1;
-			PlayerPrefs.SetInt("SetSpawnHub", 1);
 		}
 		if(canOpenPortal1)
 		{
@@ -98,7 +97,6 @@ public class DialogoManager : MonoBehaviour
 			callMethods.canGoToLevel2 = true;
 			mitraMovement.doorNumber = 2;
 			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[1];
-			PlayerPrefs.SetInt("SetSpawnHub", 2);
 		}
 
 		if(canGoToLevel3)
@@ -106,7 +104,6 @@ public class DialogoManager : MonoBehaviour
 			callMethods.canGoToLevel3 = true;
 			mitraMovement.doorNumber = 3;
 			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[2];
-			PlayerPrefs.SetInt("SetSpawnHub", 3);
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
 	}

@@ -52,6 +52,7 @@ public class GotaController : MonoBehaviour
 				}
 				SceneManager.LoadScene(1);
 				audioData.Play();
+				PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
 			}
 		}
 	}
