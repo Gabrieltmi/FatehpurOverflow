@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
+	public MitraMovement mitraMovement;
 	public WaterMovement water;
 	private GameObject deathFloor;
 	public int numberToSetPlayerPrefs;
@@ -15,7 +16,8 @@ public class DialogoManager : MonoBehaviour
 	public int[] timeTexts;
 	public bool useOnlyOneTime;
 	public MitraMovement callMethods;
-	public GameObject spawnHub;
+	public GameObject[] spawnAfterLevel;
+
 	[SerializeField]
 	private bool canCallLevel1;
 	[SerializeField]
@@ -33,7 +35,7 @@ public class DialogoManager : MonoBehaviour
 	private void Awake()
 	{
 		deathFloor = GameObject.Find("DeathFloor");
-
+		mitraMovement = GameObject.Find("Mitra").GetComponent<MitraMovement>();
 	}
 	// Start is called before the first frame update
 	void Start()
@@ -72,7 +74,9 @@ public class DialogoManager : MonoBehaviour
 		{
 			callMethods.canGoToLevel1 =  true;
 			PlayerPrefs.SetInt("PlayedTutorial", 1);
-			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnHub;
+			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[0];
+			mitraMovement.doorNumber = 1;
+			PlayerPrefs.SetInt("SetSpawnHub", 1);
 		}
 		if(canOpenPortal1)
 		{
@@ -92,11 +96,17 @@ public class DialogoManager : MonoBehaviour
 		if(canGoToLevel2)
 		{
 			callMethods.canGoToLevel2 = true;
+			mitraMovement.doorNumber = 2;
+			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[1];
+			PlayerPrefs.SetInt("SetSpawnHub", 2);
 		}
 
 		if(canGoToLevel3)
 		{
 			callMethods.canGoToLevel3 = true;
+			mitraMovement.doorNumber = 3;
+			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[2];
+			PlayerPrefs.SetInt("SetSpawnHub", 3);
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
 	}

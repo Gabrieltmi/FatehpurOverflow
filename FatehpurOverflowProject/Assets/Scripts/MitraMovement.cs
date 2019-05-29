@@ -24,6 +24,7 @@ public class MitraMovement : MonoBehaviour
 	public GameObject afterOpenPortal3Hub;
 	public GameObject midPos;
 	public GameObject[] midAnim;
+	public int doorNumber;
 	public bool canGoToLevel1;
 	public bool canGoToLevel2;
 	public bool canGoToLevel3;
@@ -41,12 +42,14 @@ public class MitraMovement : MonoBehaviour
 	public GameObject door3;
 	public bool returnToPos1;
 	public bool returnToPos2;
+	public bool returnToPos3;
 	public DialogoManager dialogoPortal1;
 	public DialogoManager dialogoPortal2;
 	public DialogoManager dialogoPortal3;
 	public DialogoManager dialogo7;
 	public DialogoManager dialogo10;
 	int x;
+
 
 	private void Awake()
 	{
@@ -155,6 +158,11 @@ public class MitraMovement : MonoBehaviour
 			ReturnToPos(afterOpenPortal2);
 		}
 
+		if (returnToPos3)
+		{
+			ReturnToPos(afterOpenPortal3);
+		}
+
 		if (canGoAfterLevel1)
 		{
 			CanGoAfterLevel1();
@@ -164,7 +172,7 @@ public class MitraMovement : MonoBehaviour
 		{
 			CanGoAfterLevel2();
 		}
-		
+
 		if (goMiddle)
 		{
 			GoMiddle();
@@ -190,6 +198,7 @@ public class MitraMovement : MonoBehaviour
 		{
 			canOpenPortal1 = false;
 			canOpenPortal2 = false;
+			canOpenPortal3 = false;
 		}
 	}
 
@@ -200,6 +209,7 @@ public class MitraMovement : MonoBehaviour
 		{
 			returnToPos1 = false;
 			returnToPos2 = false;
+			returnToPos3 = false;
 		}
 	}
 
@@ -278,10 +288,12 @@ public class MitraMovement : MonoBehaviour
 	IEnumerator ReturnAndText(DialogoManager diag, int level)
 	{
 		yield return new WaitForSeconds(4);
-		if (level == 1)
+		if (doorNumber == 1)
 			returnToPos1 = true;
-		else if (level == 2)
+		else if (doorNumber == 2)
 			returnToPos2 = true;
+		else if (doorNumber == 3)
+			returnToPos3 = true;
 		yield return new WaitForSeconds(3);
 		StartCoroutine(diag.DialogoChange());
 	}

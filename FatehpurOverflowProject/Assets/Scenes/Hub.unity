@@ -379,7 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 9
   dialogo:
   - "Vamos quebrar essa maldi\xE7\xE3o!"
@@ -389,7 +390,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 1
@@ -466,7 +470,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 10.253231}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 73
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &91654782
 GameObject:
@@ -1256,7 +1260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 3
   dialogo:
   - "Varuna aprisionou o meu poder dentro das constru\xE7\xF5es daqui."
@@ -1267,7 +1272,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 1
   canGoAfterLevel1: 0
@@ -1344,7 +1352,7 @@ Transform:
   m_LocalScale: {x: 12.239598, y: 10.639028, z: 12.3329}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &286716115
 PrefabInstance:
@@ -2176,12 +2184,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &435573519 stripped
+--- !u!1 &419977306
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7926881461442030466, guid: c05f3df9e39894941b1e5d539b5e22a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 7926881461277816973}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419977307}
+  m_Layer: 0
+  m_Name: PlayerSpawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419977307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419977306}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -1.27, y: 16.227106, z: 277.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 68
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &494832981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2473,66 @@ MonoBehaviour:
   smooth: 10
   dollyDirAdjusted: {x: 0, y: 0, z: 0}
   distance: 0
+--- !u!1 &546429134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546429135}
+  m_Layer: 0
+  m_Name: PlayerSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &546429135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546429134}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 50.5, y: 16.227106, z: 215.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 67
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &587622265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 587622266}
+  m_Layer: 0
+  m_Name: PlayerSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &587622266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587622265}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -69.04, y: 16.227106, z: 214.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 66
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &592102759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4152,7 +4244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 8
   dialogo:
   - Pronto, pode passar.
@@ -4162,7 +4255,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 0
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -4226,7 +4322,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 4.9948244}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926948477
 GameObject:
@@ -4786,6 +4882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mitraMovement: {fileID: 0}
   water: {fileID: 376083719}
   numberToSetPlayerPrefs: 11
   dialogo:
@@ -4797,7 +4894,10 @@ MonoBehaviour:
   timeTexts: 0400000005000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -4861,7 +4961,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 10.253231}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093340823
 GameObject:
@@ -4930,10 +5030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378b426c91ff0c844aadee30f130231b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 435573519}
-  level1Counter: {fileID: 0}
-  level2Counter: {fileID: 0}
-  level3Counter: {fileID: 0}
+  spawnHub:
+  - {fileID: 1235165961}
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   thanksMenu: {fileID: 1181789931}
   options: {fileID: 752975337}
   dialogo:
@@ -5282,6 +5383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mitraMovement: {fileID: 0}
   water: {fileID: 376083719}
   numberToSetPlayerPrefs: 7
   dialogo:
@@ -5294,7 +5396,10 @@ MonoBehaviour:
   timeTexts: 030000000500000004000000
   useOnlyOneTime: 0
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -5358,7 +5463,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 4.9948244}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181789931
 GameObject:
@@ -5575,6 +5680,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1235165961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235165962}
+  m_Layer: 0
+  m_Name: PlayerSpawn0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235165962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235165961}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.1, y: 16.227106, z: 137.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 65
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1278648451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5637,6 +5772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mitraMovement: {fileID: 0}
   water: {fileID: 376083719}
   numberToSetPlayerPrefs: 10
   dialogo:
@@ -5647,7 +5783,10 @@ MonoBehaviour:
   timeTexts: 01000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -5724,7 +5863,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 10.253231}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313108262
 GameObject:
@@ -6166,6 +6305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mitraMovement: {fileID: 0}
   water: {fileID: 376083719}
   numberToSetPlayerPrefs: 6
   dialogo:
@@ -6176,7 +6316,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 0
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -6253,7 +6396,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 4.9948244}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1417497942
 PrefabInstance:
@@ -27773,7 +27916,7 @@ Transform:
   m_Children:
   - {fileID: 95091976}
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1715580277
 Transform:
@@ -28215,7 +28358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 12
   dialogo:
   - Pronto, pode passar.
@@ -28225,7 +28369,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 0
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -28289,7 +28436,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 4.9948244}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1863319283
 GameObject:
@@ -28462,7 +28609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 4
   dialogo:
   - "Pronto! Voc\xEA ter\xE1 que entrar sozinho n\xE3o consigo ir por causa da maldi\xE7\xE3o."
@@ -28472,7 +28620,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -28536,7 +28687,7 @@ Transform:
   m_LocalScale: {x: 12.239598, y: 10.639028, z: 12.3329}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879396050
 GameObject:
@@ -28671,7 +28822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 5
   dialogo:
   - "Voc\xEA conseguiu!"
@@ -28682,7 +28834,10 @@ MonoBehaviour:
   timeTexts: 05000000
   useOnlyOneTime: 1
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 435573519}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 1
@@ -28759,7 +28914,7 @@ Transform:
   m_LocalScale: {x: 7.6655264, y: 10.639028, z: 4.9948244}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907987913 stripped
 GameObject:
@@ -28813,7 +28968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 1
   dialogo:
   - Finalmente conhecerei a cidade que foi abandonada por minha causa
@@ -28824,7 +28980,10 @@ MonoBehaviour:
   timeTexts: 04000000
   useOnlyOneTime: 1
   callMethods: {fileID: 0}
-  spawnHub: {fileID: 0}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 0
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -28901,7 +29060,7 @@ Transform:
   m_LocalScale: {x: 12.239598, y: 10.639028, z: 7.9979897}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1929617651
 MeshCollider:
@@ -36622,7 +36781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1d87fa6df1864c8f1e5d28ea40bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  mitraMovement: {fileID: 0}
+  water: {fileID: 376083719}
   numberToSetPlayerPrefs: 2
   dialogo:
   - "Finalmente garoto, j\xE1 faz um ano que estou te esperando!"
@@ -36637,7 +36797,10 @@ MonoBehaviour:
   timeTexts: 050000000300000004000000040000000600000004000000
   useOnlyOneTime: 0
   callMethods: {fileID: 4439500733567462534}
-  spawnHub: {fileID: 0}
+  spawnAfterLevel:
+  - {fileID: 587622265}
+  - {fileID: 546429134}
+  - {fileID: 419977306}
   canCallLevel1: 1
   canOpenPortal1: 0
   canGoAfterLevel1: 0
@@ -36656,7 +36819,7 @@ Transform:
   m_LocalScale: {x: 12.239598, y: 10.639028, z: 12.3329}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4879541219728243708
 GameObject:

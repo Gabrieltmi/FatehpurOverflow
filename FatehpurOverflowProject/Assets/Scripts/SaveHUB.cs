@@ -7,13 +7,7 @@ using UnityEngine.SceneManagement;
 public class SaveHUB : MonoBehaviour
 {
 	private GameObject player;
-	public GameObject spawn;
-	[SerializeField]
-	private TextMeshPro level1Counter;
-	[SerializeField]
-	private TextMeshPro level2Counter;
-	[SerializeField]
-	private TextMeshPro level3Counter;
+	public GameObject[] spawnHub;
 	[SerializeField]
 	private GameObject thanksMenu;
 	public GameObject options;
@@ -27,30 +21,31 @@ public class SaveHUB : MonoBehaviour
 	{
 		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		player = GameObject.Find("Player");
-		if (PlayerPrefs.HasKey("PlayedTutorial"))
+
+		if (PlayerPrefs.HasKey("SetSpawnHub"))
+		{
+				switch (PlayerPrefs.GetInt("SetSpawnHub"))
+				{
+					default:
+						break;
+					case 1:
+						player.transform.position = spawnHub[1].transform.position;
+						break;
+					case 2:
+						player.transform.position = spawnHub[2].transform.position;
+						break;
+					case 3:
+						player.transform.position = spawnHub[3].transform.position;
+						break;
+				}
+		}
+		else if (PlayerPrefs.HasKey("PlayedTutorial"))
 		{
 			if (PlayerPrefs.GetInt("PlayedTutorial") == 1)
 			{
-				player.transform.position = spawn.transform.position;
+				player.transform.position = spawnHub[0].transform.position;
 			}
 		}
-
-		if (PlayerPrefs.HasKey("ActualQuantityLevel1"))
-		{
-			level1Counter.text = (PlayerPrefs.GetInt("ActualQuantityLevel1").ToString() + "/ 21");
-		}
-
-		if (PlayerPrefs.HasKey("ActualQuantityLevel2"))
-		{
-			level2Counter.text = (PlayerPrefs.GetInt("ActualQuantityLevel2").ToString() + "/ 13");
-
-		}
-
-		if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
-		{
-			level3Counter.text = (PlayerPrefs.GetInt("ActualQuantityLevel3").ToString() + "/ 23");
-		}
-
 		for (int i = 0; i < dialogo.Length; i++)
 		{
 			if (PlayerPrefs.HasKey("Dialogo" + i))
@@ -66,12 +61,12 @@ public class SaveHUB : MonoBehaviour
 			dialogo[6].SetActive(true);
 			dialogo[7].SetActive(true);
 		}
-		if(Global.actualLevel == 2)
+		if (Global.actualLevel == 2)
 		{
 			dialogo[8].SetActive(true);
 			dialogo[9].SetActive(true);
 		}
-	
+
 	}
 
 	private void Start()
