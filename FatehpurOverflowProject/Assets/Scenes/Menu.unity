@@ -2751,7 +2751,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 769ff5f22d477c445af903190081f1f4, type: 3}
+    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -3158,6 +3158,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1382160649, guid: c39ef2e112fa24e59a5174e1eb78a9aa, type: 3}
+      propertyPath: musicMenu
+      value: 
+      objectReference: {fileID: 1394337816}
     - target: {fileID: 8938380454152529961, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3175,10 +3179,6 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1382160649, guid: c39ef2e112fa24e59a5174e1eb78a9aa, type: 3}
-      propertyPath: musicMenu
-      value: 
-      objectReference: {fileID: 1394337816}
     - target: {fileID: 5676416449598058974, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
       propertyPath: musicMenu

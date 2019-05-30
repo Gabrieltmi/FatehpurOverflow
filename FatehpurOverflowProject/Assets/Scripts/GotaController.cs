@@ -45,6 +45,7 @@ public class GotaController : MonoBehaviour
 					if (!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
 					{
 						PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+
 					}
 
 					else
@@ -55,6 +56,7 @@ public class GotaController : MonoBehaviour
 							PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
 						}
 					}
+					PlayerPrefs.SetInt("SetSpawnHub", Global.actualLevel);
 					SceneManager.LoadScene(1);
 					audioData.Play();
 					PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
