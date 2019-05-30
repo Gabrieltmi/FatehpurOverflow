@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4e063574a2d8540a554ecda06a507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canCheat: 1
+  canCheat: 0
   advancedSettings:
     groundCheckDistance: 0.3
     stickToGroundHelperDistance: 0.5

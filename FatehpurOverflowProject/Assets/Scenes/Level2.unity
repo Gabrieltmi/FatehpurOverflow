@@ -8269,15 +8269,15 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1226260508}
-    - target: {fileID: 6284354356296279392, guid: 43aa64b489300ba429fc78b7410b1049,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.82
-      objectReference: {fileID: 0}
     - target: {fileID: 8835794443802987608, guid: 43aa64b489300ba429fc78b7410b1049,
         type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284354356296279392, guid: 43aa64b489300ba429fc78b7410b1049,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43aa64b489300ba429fc78b7410b1049, type: 3}
@@ -12128,7 +12128,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.342
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
