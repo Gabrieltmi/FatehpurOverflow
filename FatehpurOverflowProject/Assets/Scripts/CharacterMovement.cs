@@ -75,7 +75,7 @@ public class CharacterMovement : MonoBehaviour
 		public float shellOffset; //reduce the radius by that ratio to avoid getting stuck in wall (a value of 0.1f is nice)
 	}
 
-
+	public bool canCheat;
 	public AdvancedSettings advancedSettings = new AdvancedSettings();
 	public MovementSettings movementSettings = new MovementSettings();
 	private Rigidbody m_RigidBody;
@@ -100,6 +100,7 @@ public class CharacterMovement : MonoBehaviour
 	public float speedSmoothTime = 0.1f;
 	float speedSmoothVelocity;
 	float currentSpeed;
+	public bool cannotMove;
 
 	public Vector3 Velocity
 	{
@@ -154,7 +155,7 @@ public class CharacterMovement : MonoBehaviour
 			audioManager.StopSound("Steps");
 			alreadyplayed = false;
 		}
-
+		if(canCheat)
 		if (Input.GetKeyDown(KeyCode.P))
 		{
 			SceneManager.LoadScene(1);
@@ -167,7 +168,7 @@ public class CharacterMovement : MonoBehaviour
 	{
 		GroundCheck();
 
-
+		if(!cannotMove)
 		MovimentAndJumpController();
 
 	}

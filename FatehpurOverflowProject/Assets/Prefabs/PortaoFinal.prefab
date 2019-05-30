@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 286723549}
   - component: {fileID: 3291131626539439821}
   - component: {fileID: 5207772718673067641}
+  - component: {fileID: 5916904231664593002}
   m_Layer: 0
   m_Name: PortaoFinal
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   maxQuantity: 21
   actualQuantity: 0
   actualLevel: 0
+  textGota: {fileID: 0}
 --- !u!65 &3291131626539439821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,6 +161,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5916904231664593002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286723548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9af224f9b003049a7657a46a168f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5489776989503630491
 GameObject:
   m_ObjectHideFlags: 0

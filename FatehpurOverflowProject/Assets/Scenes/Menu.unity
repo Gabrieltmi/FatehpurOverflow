@@ -459,7 +459,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 769ff5f22d477c445af903190081f1f4, type: 3}
+    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -471,9 +471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Options
-
-'
+  m_Text: "Op\xE7\xF5es"
 --- !u!222 &238308226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -552,9 +550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Continue
-
-'
+  m_Text: Continuar
 --- !u!222 &268388059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -633,9 +629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
-
-'
+  m_Text: Sair
 --- !u!222 &541555196
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1275,7 +1269,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: 'Jogar
+
+'
 --- !u!222 &1008614619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1718,7 +1714,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 769ff5f22d477c445af903190081f1f4, type: 3}
+    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1730,7 +1726,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Are you sure?
+  m_Text: "Voc\xEA tem certeza?\n"
 --- !u!222 &1079443911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1809,9 +1805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
-
-'
+  m_Text: Sair
 --- !u!222 &1091399616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2181,9 +2175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Yes
-
-'
+  m_Text: Sim
 --- !u!222 &1320680508
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2424,6 +2416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394337815}
   - component: {fileID: 1394337816}
+  - component: {fileID: 1394337817}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -2457,7 +2450,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7a8e7fdfc03cdbb43b88360abbc2a699, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.186
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2541,6 +2534,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1394337817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394337814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860b6d3b60efd2f4aaee6042dd9c0957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMenu: {fileID: 1394337816}
+  isMenuSound: 1
+  isSliderMusic: 0
+  isSliderEffect: 0
+  isOnMenu: 0
 --- !u!1 &1412640951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2672,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 769ff5f22d477c445af903190081f1f4, type: 3}
+    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -2674,9 +2684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Options
-
-'
+  m_Text: "Op\xE7\xF5es"
 --- !u!222 &1458709440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2755,9 +2763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'No
-
-'
+  m_Text: "N\xE3o"
 --- !u!222 &1511330955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2836,9 +2842,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'New Game
-
-'
+  m_Text: Novo Jogo
 --- !u!222 &1547959931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3049,11 +3053,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 8938380454198284526, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8938380454198284513, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3169,115 +3168,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 55549600}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
+    - target: {fileID: 8938380453568693070, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0.3679245
+      propertyPath: m_Text
+      value: 'Musica
+
+'
       objectReference: {fileID: 0}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
+    - target: {fileID: 1382160649, guid: c39ef2e112fa24e59a5174e1eb78a9aa, type: 3}
+      propertyPath: musicMenu
+      value: 
+      objectReference: {fileID: 1394337816}
+    - target: {fileID: 5676416449598058974, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0.3679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0.3679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453003506520, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453583914374, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453800759673, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453800759673, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380453800759673, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380454049976475, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380454049976475, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380452985002818, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380452985002818, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380452985002818, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380454080668163, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938380454080668163, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: musicMenu
+      value: 
+      objectReference: {fileID: 1394337816}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39ef2e112fa24e59a5174e1eb78a9aa, type: 3}

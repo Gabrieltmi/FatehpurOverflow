@@ -8,8 +8,6 @@ public class SaveHUB : MonoBehaviour
 {
 	private GameObject player;
 	public GameObject[] spawnHub;
-	[SerializeField]
-	private GameObject thanksMenu;
 	public GameObject options;
 	private AudioManager audioManager;
 	[SerializeField]
@@ -85,12 +83,7 @@ public class SaveHUB : MonoBehaviour
 
 	private void Start()
 	{
-		if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
-		{
-			thanksMenu.SetActive(true);
-			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = true;
-		}
+
 	}
 
 	public void continueButton()

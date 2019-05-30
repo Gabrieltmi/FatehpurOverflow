@@ -29,10 +29,12 @@ public class platformaQuebravel : MonoBehaviour
 		yield return new WaitForSeconds(2);
 		this.GetComponent<MeshRenderer>().enabled = false;
 		this.GetComponent<BoxCollider>().enabled = false;
-		this.GetComponentInChildren<BoxCollider>().enabled = false;
+		//this.GetComponentInChildren<BoxCollider>().enabled = false;
+		this.transform.GetChild(0).GetComponent<BoxCollider>().enabled = false;
 		yield return new WaitForSeconds(4);
 		this.GetComponent<MeshRenderer>().enabled = true;
 		this.GetComponent<BoxCollider>().enabled = true;
-		this.GetComponentInChildren<BoxCollider>().enabled = true;
+		//this.GetComponentInChildren<BoxCollider>().enabled = true;
+		this.transform.GetChild(0).GetComponent<BoxCollider>().enabled = true;
 	}
 }

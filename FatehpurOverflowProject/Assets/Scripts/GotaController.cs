@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GotaController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GotaController : MonoBehaviour
 	private TextMeshPro counterDoor;
 	public int actualLevel;
 	AudioSource audioData;
+	public Text textGota;
 
 	private void Awake()
 	{
@@ -23,6 +25,7 @@ public class GotaController : MonoBehaviour
 	void Start()
 	{
 		counterDoor.text = (actualQuantity + " / " + maxQuantity);
+		textGota.text = (actualQuantity + " / " + maxQuantity); 
 	}
 
 	// Update is called once per frame
@@ -35,24 +38,27 @@ public class GotaController : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			if (Input.GetKeyDown(KeyCode.E))
+			if (actualQuantity == maxQuantity)
 			{
-				if (!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
+				if (Input.GetKeyDown(KeyCode.E))
 				{
-					PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
-				}
-
-				else
-				{
-					if (PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel) < actualQuantity)
+					if (!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
 					{
-
 						PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
 					}
+
+					else
+					{
+						if (PlayerPrefs.GetInt("ActualQuantityLevel" + actualLevel) < actualQuantity)
+						{
+
+							PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
+						}
+					}
+					SceneManager.LoadScene(1);
+					audioData.Play();
+					PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
 				}
-				SceneManager.LoadScene(1);
-				audioData.Play();
-				PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
 			}
 		}
 	}
@@ -60,5 +66,6 @@ public class GotaController : MonoBehaviour
 	public void UpdateCounterText()
 	{
 		counterDoor.text = (actualQuantity + " / " + maxQuantity);
+		textGota.text = (actualQuantity + " / " + maxQuantity);
 	}
 }

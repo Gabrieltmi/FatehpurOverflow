@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
+	public bool canBlockMovement;
+	private GameObject player;
 	public MitraMovement mitraMovement;
 	public WaterMovement water;
 	private GameObject deathFloor;
 	public int numberToSetPlayerPrefs;
 	public string[] dialogo;
 	public Text textDialogo;
+	public GameObject image;
+	public GameObject creditos;
+
 	public bool activated;
 	public int[] numeroDialogo;
 	public int[] timeTexts;
@@ -30,12 +35,17 @@ public class DialogoManager : MonoBehaviour
 	private bool canGoToLevel2;
 	[SerializeField]
 	private bool canGoToLevel3;
+	[SerializeField]
+	private bool endGame;
+	private AudioManager audioManager;
 
 
 	private void Awake()
 	{
 		deathFloor = GameObject.Find("DeathFloor");
 		mitraMovement = GameObject.Find("Mitra").GetComponent<MitraMovement>();
+		player = GameObject.FindGameObjectWithTag("Player");
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 	}
 	// Start is called before the first frame update
 	void Start()
@@ -62,15 +72,24 @@ public class DialogoManager : MonoBehaviour
 	{
 		for (int i = 0; i < numeroDialogo.Length; i++)
 		{
+			if (canBlockMovement)
+			{
+				player.GetComponent<CharacterMovement>().cannotMove = true;
+				audioManager.StopSound("Steps");
+			}			
 			textDialogo.text = dialogo[numeroDialogo[i]];
 			textDialogo.gameObject.SetActive(true);
-			if(useOnlyOneTime)
+			image.SetActive(true);
+			if (useOnlyOneTime)
 			yield return new WaitForSeconds(timeTexts[0]);
 			else
 				yield return new WaitForSeconds(timeTexts[i]);
 			textDialogo.gameObject.SetActive(false);
+			image.SetActive(false);
 		}
-		if(canCallLevel1)
+		if (canBlockMovement)
+			player.GetComponent<CharacterMovement>().cannotMove = false;
+		if (canCallLevel1)
 		{
 			callMethods.canGoToLevel1 =  true;
 			PlayerPrefs.SetInt("PlayedTutorial", 1);
@@ -104,6 +123,11 @@ public class DialogoManager : MonoBehaviour
 			callMethods.canGoToLevel3 = true;
 			mitraMovement.doorNumber = 3;
 			deathFloor.GetComponent<DeathHandler>().actualSpawnPoint = spawnAfterLevel[2];
+		}
+
+		if(endGame)
+		{
+			creditos.SetActive(true);
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
 	}

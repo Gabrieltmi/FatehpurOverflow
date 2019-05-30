@@ -244,7 +244,7 @@ public class MitraMovement : MonoBehaviour
 				x++;
 			else
 			{
-				speed = 7;
+				speed = 9;
 				if (Global.actualLevel == 1 || PlayerPrefs.GetInt("SetSpawnHub") == 1)
 				{
 					canGoAfterLevel1 = true;

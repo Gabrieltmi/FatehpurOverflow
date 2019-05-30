@@ -91,7 +91,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e43410027040d347b048cfec3a52a8f, type: 2}
+  - {fileID: 2100000, guid: 8ee757985b44b254b849dd4006d7cf04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4e063574a2d8540a554ecda06a507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canCheat: 1
   advancedSettings:
     groundCheckDistance: 0.3
     stickToGroundHelperDistance: 0.5
@@ -183,6 +184,7 @@ MonoBehaviour:
   wallJumpSpeed: 15
   turnSmoothTime: 0.12
   speedSmoothTime: 0.1
+  cannotMove: 0
 --- !u!136 &9014113360642583895
 CapsuleCollider:
   m_ObjectHideFlags: 0

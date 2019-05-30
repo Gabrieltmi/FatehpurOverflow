@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
 
 	void Start()
     {
-		audioManager.PlaySound("WindDesert");
+		//audioManager.PlaySound("WindDesert");
     }
 
     // Update is called once per frame
