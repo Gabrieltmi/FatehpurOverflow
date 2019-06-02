@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 469aa8d9ba56be84584d436af301d3f3
+guid: ea578ebd742214c418917fa653ffc22b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: default
+    100000: Parede1:Mesh
     100002: //RootNode
-    400000: default
+    400000: Parede1:Mesh
     400002: //RootNode
-    2100000: defaultMat
-    2300000: default
-    3300000: default
-    4300000: default
+    2100000: Parede1_MeshMat
+    2300000: Parede1:Mesh
+    3300000: Parede1:Mesh
+    4300000: Parede1:Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
