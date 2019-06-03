@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
+	public bool onAwake;
 	public bool canBlockMovement;
 	private GameObject player;
 	public MitraMovement mitraMovement;
@@ -50,7 +51,11 @@ public class DialogoManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        if(onAwake)
+		{
+			activated = true;
+			StartCoroutine(DialogoChange());
+		}
     }
 
     // Update is called once per frame

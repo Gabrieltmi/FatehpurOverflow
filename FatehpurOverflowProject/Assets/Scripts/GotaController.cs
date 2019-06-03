@@ -14,10 +14,13 @@ public class GotaController : MonoBehaviour
 	public int actualLevel;
 	AudioSource audioData;
 	public Text textGota;
+	public GameObject loadingBG;
+	public bool canUseDoor;
 
 	private void Awake()
 	{
 		counterDoor = GameObject.Find("CounterDoor").GetComponent<TextMeshPro>();
+		audioData = this.GetComponent<AudioSource>();
 
 	}
 
@@ -38,7 +41,7 @@ public class GotaController : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			if (actualQuantity == maxQuantity)
+			if (actualQuantity == maxQuantity || canUseDoor == true)
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
@@ -57,7 +60,8 @@ public class GotaController : MonoBehaviour
 						}
 					}
 					PlayerPrefs.SetInt("SetSpawnHub", Global.actualLevel);
-					SceneManager.LoadScene(1);
+					AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+					loadingBG.SetActive(true);
 					audioData.Play();
 					PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
 				}
