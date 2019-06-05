@@ -44,16 +44,19 @@ public class DialogoManager : MonoBehaviour
 	private void Awake()
 	{
 		deathFloor = GameObject.Find("DeathFloor");
-		mitraMovement = GameObject.Find("Mitra").GetComponent<MitraMovement>();
-		player = GameObject.FindGameObjectWithTag("Player");
+		if(!onAwake)
+		{
 		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+		mitraMovement = GameObject.Find("Mitra").GetComponent<MitraMovement>();
+		}
+		player = GameObject.FindGameObjectWithTag("Player");
+
 	}
 	// Start is called before the first frame update
 	void Start()
     {
         if(onAwake)
 		{
-			activated = true;
 			StartCoroutine(DialogoChange());
 		}
     }
@@ -61,8 +64,8 @@ public class DialogoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -77,6 +80,7 @@ public class DialogoManager : MonoBehaviour
 	{
 		for (int i = 0; i < numeroDialogo.Length; i++)
 		{
+			Debug.Log(i);
 			if (canBlockMovement)
 			{
 				player.GetComponent<CharacterMovement>().cannotMove = true;
@@ -135,6 +139,7 @@ public class DialogoManager : MonoBehaviour
 			creditos.SetActive(true);
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
+		Debug.Log("CorroutineEnds");
 	}
 
 	IEnumerator MoveWater()
