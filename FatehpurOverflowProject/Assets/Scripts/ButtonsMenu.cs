@@ -38,10 +38,15 @@ public class ButtonsMenu : MonoBehaviour
 		SceneManager.LoadScene("Hub");
 	}
 
+	public void StartIntro()
+	{
+		SceneManager.LoadScene(5);
+	}
+
 	public void StartGameNewGame()
 	{
 		PlayerPrefs.DeleteKey("PlayedTutorial");
-		SceneManager.LoadScene("Hub");
+
 		if (PlayerPrefs.HasKey("ActualQuantityLevel1"))
 		{
 			PlayerPrefs.DeleteKey("ActualQuantityLevel1");
@@ -71,6 +76,8 @@ public class ButtonsMenu : MonoBehaviour
 				PlayerPrefs.DeleteKey("Dialogo" + i);
 			}
 		}
+
+		SceneManager.LoadScene(5);
 	}
 
 	public void BackButton()

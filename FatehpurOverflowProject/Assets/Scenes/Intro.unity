@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1270,8 +1270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000061035, y: 56.100006}
-  m_SizeDelta: {x: 1290, y: 111.7}
+  m_AnchoredPosition: {x: 0.000061035, y: 66}
+  m_SizeDelta: {x: 1290, y: 131.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788607552
 MonoBehaviour:
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1419,8 +1419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0044708, y: -306.83}
-  m_SizeDelta: {x: 1223.1, y: 111.9}
+  m_AnchoredPosition: {x: 0.0044708, y: -298}
+  m_SizeDelta: {x: 1223.1, y: 118.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2067020667
 MonoBehaviour:
@@ -1440,40 +1440,45 @@ MonoBehaviour:
   water: {fileID: 0}
   numberToSetPlayerPrefs: 0
   dialogo:
-  - "Salim Sikri, o porta voz dos deuses, lhe mostra uma profecia, de que algum humano,
-    iria govern\xE1-los, se tornando o novo rei dos deuses."
-  - "Muitos deuses gostaram da ideia, deuses no qual estavam insatisfeito com sua
-    situa\xE7\xE3o atual."
-  - "Varuna o atual rei, se sentiu amea\xE7ado com tal profecia, e com medo de perder
-    seu poder perante todos, jurou que a humanidade se curvaria a ele novamente."
-  - Durga desconfiada de Varuna, estava disposta a fazer a profecia virar realidade.
-  - "Em Agra o Imperador n\xE3o conseguia ter herdeiros."
-  - "E com medo de sua linhagem se acabar ele foi a Salim Sikri pedir uma ben\xE7\xE3o
-    divina."
-  - "Durga aparece entre eles, e vendo como oportunidade, o aben\xE7oa dizendo que
-    seu \xFAltimo filho teria um prop\xF3sito maior que o primog\xEAnito."
-  - "Ap\xF3s a ben\xE7\xE3o de Durga e o nascimento de seu primog\xEAnito, Akbar constr\xF3i
-    uma nova cidade em homenagem ao rec\xE9m-nascido, Fatehpur Sikri a nova capital
-    do Imp\xE9rio."
-  - "Com o nascimento do \xFAltimo filho de Akbar, Emir, Durga d\xE1 uma miss\xE3o
-    a Mitra, para que ele ajudasse o garoto quando a hora chegasse."
-  - "Varuna furioso com o nascimento do Deus Prometido, amaldi\xE7oa a cidade de Fatehpur
-    Sikri, para que nada nunca mais cres\xE7a nessas terras."
-  - E todos tiveram de abandonar Fatehpur Sikri.
-  - "Emir cresceu com o passar dos anos, mas a maldi\xE7\xE3o tamb\xE9m, e chegou
-    at\xE9 a capital, trazendo fome, doen\xE7as, e morte."
-  - "Akbar, v\xEDtima da maldi\xE7\xE3o, em seu leito de morte confirma que Emir foi
-    seu \xFAltimo filho e lhe pede para que retorne a Fatehpur Sikri encontrar seu
-    destino e desfazer a maldi\xE7\xE3o."
-  - "Ap\xF3s o funeral de Akbar, Emir parte para a cidade ambona sem questionar o
-    que faria em lugar como Fatehpur Sikri onde at\xE9 bandidos mantinham dist\xE2ncia."
+  - "Por volta de 1567, \xE9poca em que os Deuses eram governados por Varuna, Salim
+    Sikri, porta voz das divindades, profetiza um humano tomando o posto de Rei dos
+    Deuses no lugar de Varuna."
+  - "Insatisfeitos com a situa\xE7\xE3o em que se encontravam, muitos Deuses se mostraram
+    animados com a ideia de um novo Rei."
+  - "Por outro lado, Varuna sentiu-se amea\xE7ado pela profecia e, por medo de perder
+    seu posto e poder, jurou que faria a humanidade se curvar a ele novamente."
+  - A Deusa Guerreira Durga, insatisfeita com o atual Rei e desconfiada de seu plano
+    decide fazer tudo em seu poder para tornar a profecia realidade.
+  - Ao mesmo tempo, o Imperador Akbar da cidade de Agra tem muitas dificuldades em
+    ter mais herdeiros.
+  - "E, por medo de que sua linhagem real acabasse ali, buscou Salim Sikri para pedir
+    pela Ben\xE7\xE3o Divina."
+  - "Durga percebe que esta situa\xE7\xE3o pode ser a chave para a profecia e ent\xE3o
+    decide presentear o Imperador com a fertilidade e aben\xE7oar seu \xFAltimo filho,
+    um menino com um grande destino a ser cumprido."
+  - "Com a ben\xE7\xE3o de Durga, o Imperador Akbar decide construir uma cidade inteira
+    apenas para homenagear o seu filho mais novo."
+  - "Esta cidade ficou conhecida como Fatehpur Sikri, a nova capital do Imp\xE9rio."
+  - "Com o nascimento de Emir, o \xFAltimo filho do Imperador, Durga pede a Mitra,
+    a Divindade das Promessas, que o proteja com sua vida."
+  - "Varuna fica furioso com o nascimento do Deus Prometido Emir, e ent\xE3o amaldi\xE7oa
+    a cidade de Fatehpur Sikri a nunca mais ter \xE1gua."
+  - "Por causa da maldi\xE7\xE3o, Fatehpur Sikri passou a ter secas imperdo\xE1veis
+    e teve de ser abandonada."
+  - "Emir cresceu e se tornou um jovem altru\xEDsta e inteligente, mas a maldi\xE7\xE3o
+    tamb\xE9m persistiu..."
+  - "Akbar, em seu leito de morte lhe pede para que retorne a Fatehpur Sikri encontrar
+    seu destino e desfazer a maldi\xE7\xE3o lan\xE7ada por Varuna."
+  - 'Abalado com o pedido do pai, Emir parte em uma jornada para a cidade esquecida
+    pelo homem para cumprir o destino que lhe havia sido prometido pelos Deuses. '
+  - 
   textDialogo: {fileID: 2067020668}
   image: {fileID: 1788607550}
   creditos: {fileID: 0}
   activated: 0
-  numeroDialogo: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
-  timeTexts: 0400000004000000040000000400000004000000040000000400000005000000040000000400000004000000040000000600000006000000
-  useOnlyOneTime: 1
+  numeroDialogo: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
+  timeTexts: 0d0000000b0000000a0000000a0000000a0000000a0000000c0000000a000000080000000c0000000c000000080000000a0000000c0000000c00000002000000
+  useOnlyOneTime: 0
   callMethods: {fileID: 0}
   spawnAfterLevel: []
   canCallLevel1: 0

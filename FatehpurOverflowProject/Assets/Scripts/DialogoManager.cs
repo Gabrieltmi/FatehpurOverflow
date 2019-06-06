@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogoManager : MonoBehaviour
 {
@@ -64,7 +65,6 @@ public class DialogoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -80,20 +80,23 @@ public class DialogoManager : MonoBehaviour
 	{
 		for (int i = 0; i < numeroDialogo.Length; i++)
 		{
-			Debug.Log(i);
 			if (canBlockMovement)
 			{
 				player.GetComponent<CharacterMovement>().cannotMove = true;
 				audioManager.StopSound("Steps");
 			}			
 			textDialogo.text = dialogo[numeroDialogo[i]];
-			textDialogo.gameObject.SetActive(true);
+			if (!onAwake)
+				textDialogo.gameObject.SetActive(true);
 			image.SetActive(true);
 			if (useOnlyOneTime)
 			yield return new WaitForSeconds(timeTexts[0]);
 			else
-				yield return new WaitForSeconds(timeTexts[i]);
-			textDialogo.gameObject.SetActive(false);
+			{
+				yield return new WaitForSeconds(timeTexts[i]);		
+			}
+			if (!onAwake)
+				textDialogo.gameObject.SetActive(false);
 			image.SetActive(false);
 		}
 		if (canBlockMovement)
@@ -139,7 +142,11 @@ public class DialogoManager : MonoBehaviour
 			creditos.SetActive(true);
 		}
 		PlayerPrefs.SetInt("Dialogo" + numberToSetPlayerPrefs, 1);
-		Debug.Log("CorroutineEnds");
+
+		if(onAwake)
+		{
+			SceneManager.LoadScene(1);
+		}
 	}
 
 	IEnumerator MoveWater()
