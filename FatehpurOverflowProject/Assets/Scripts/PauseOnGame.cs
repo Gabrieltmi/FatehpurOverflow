@@ -10,6 +10,12 @@ public class PauseOnGame : MonoBehaviour
 	public GameObject count;
 	public GameObject dialogo;
 	public bool isLevel;
+
+	private void Awake()
+	{
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+	}
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -39,6 +45,7 @@ public class PauseOnGame : MonoBehaviour
 			dialogo.SetActive(false);
 			if(isLevel)
 			count.SetActive(false);
+			audioManager.StopSound("Steps");
 		}
 	}
 

@@ -15,6 +15,12 @@ public class DoorHandler : MonoBehaviour
 	[SerializeField]
 	float duration;
 	float t = 0f;
+	private AudioManager audioManager;
+
+	private void Awake()
+	{
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+	}
 
 	void Start()
     {
@@ -40,6 +46,7 @@ public class DoorHandler : MonoBehaviour
 			{
 				SceneManager.LoadScene(sceneToLoad);
 				Global.actualLevel = sceneToLoad - 1;
+				audioManager.StopSound("Steps");
 			}
 		}
 	}

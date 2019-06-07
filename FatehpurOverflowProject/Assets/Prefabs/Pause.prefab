@@ -920,7 +920,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
+    m_Font: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
+    m_Font: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1cd81adb1665d0c4fb06f180c369a655, type: 3}
+    m_Font: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -1468,6 +1468,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8938380453568693070, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0,
+        type: 3}
     - target: {fileID: 8938380453800759673, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -1508,6 +1514,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8938380454134869963, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0,
+        type: 3}
     - target: {fileID: 8938380454080668163, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1518,6 +1530,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8938380454078067414, guid: c39ef2e112fa24e59a5174e1eb78a9aa,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b60e5d157eb9e8b4fa61d22de543fff0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39ef2e112fa24e59a5174e1eb78a9aa, type: 3}
 --- !u!1 &6790171544164364407 stripped

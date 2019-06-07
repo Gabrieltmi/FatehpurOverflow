@@ -16,12 +16,13 @@ public class GotaController : MonoBehaviour
 	public Text textGota;
 	public GameObject loadingBG;
 	public bool canUseDoor;
+	private AudioManager audioManager;
 
 	private void Awake()
 	{
 		counterDoor = GameObject.Find("CounterDoor").GetComponent<TextMeshPro>();
 		audioData = this.GetComponent<AudioSource>();
-
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 	}
 
 	// Start is called before the first frame update
@@ -48,7 +49,7 @@ public class GotaController : MonoBehaviour
 					if (!PlayerPrefs.HasKey("ActualQuantityLevel" + actualLevel))
 					{
 						PlayerPrefs.SetInt("ActualQuantityLevel" + actualLevel, actualQuantity);
-
+						
 					}
 
 					else
@@ -64,6 +65,7 @@ public class GotaController : MonoBehaviour
 					loadingBG.SetActive(true);
 					audioData.Play();
 					PlayerPrefs.SetInt("SetSpawnHub", actualLevel);
+					audioManager.StopSound("Steps");
 				}
 			}
 		}
