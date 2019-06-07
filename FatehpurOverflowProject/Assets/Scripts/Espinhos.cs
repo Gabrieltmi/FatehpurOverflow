@@ -12,6 +12,7 @@ public class Espinhos : MonoBehaviour
     {
 		deathHandler = GameObject.Find("DeathFloor").GetComponent<DeathHandler>();
 		audioData = GetComponent<AudioSource>();
+
 	}
 
     // Update is called once per frame

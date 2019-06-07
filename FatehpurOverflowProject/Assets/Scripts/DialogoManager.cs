@@ -8,7 +8,7 @@ public class DialogoManager : MonoBehaviour
 {
 	public bool onAwake;
 	public bool canBlockMovement;
-	private GameObject player;
+	public GameObject player;
 	public MitraMovement mitraMovement;
 	public WaterMovement water;
 	private GameObject deathFloor;
@@ -50,7 +50,6 @@ public class DialogoManager : MonoBehaviour
 		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 		mitraMovement = GameObject.Find("Mitra").GetComponent<MitraMovement>();
 		}
-		player = GameObject.FindGameObjectWithTag("Player");
 
 	}
 	// Start is called before the first frame update

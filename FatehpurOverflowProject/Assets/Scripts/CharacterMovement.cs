@@ -155,6 +155,7 @@ public class CharacterMovement : MonoBehaviour
 			audioManager.StopSound("Steps");
 			alreadyplayed = false;
 		}
+
 		if(canCheat)
 		if (Input.GetKeyDown(KeyCode.P))
 		{
@@ -168,7 +169,7 @@ public class CharacterMovement : MonoBehaviour
 	{
 		GroundCheck();
 
-		if(!cannotMove)
+		if(!cannotMove && !Global.isPaused)
 		MovimentAndJumpController();
 
 	}

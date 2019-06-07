@@ -93,3 +93,10 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
     loop: 0
+  - name: Died
+    clip: {fileID: 8300000, guid: 624d8222660503b44b44cf492fd5a342, type: 3}
+    volume: 0.748
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    loop: 0

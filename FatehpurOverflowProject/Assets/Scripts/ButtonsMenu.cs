@@ -14,11 +14,8 @@ public class ButtonsMenu : MonoBehaviour
 	{
 		if (PlayerPrefs.HasKey("PlayedTutorial"))
 		{
-			if (PlayerPrefs.GetInt("PlayedTutorial") == 1)
-			{
 				mainMenu1.SetActive(false);
 				mainMenu2.SetActive(true);
-			}
 		}
 	}
 
@@ -30,7 +27,10 @@ public class ButtonsMenu : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
+		if (Input.GetKeyDown(KeyCode.Alpha9))
+		{
+			PlayerPrefs.DeleteAll();
+		}
 	}
 
 	public void StartGame()
@@ -47,21 +47,6 @@ public class ButtonsMenu : MonoBehaviour
 	{
 		PlayerPrefs.DeleteKey("PlayedTutorial");
 
-		if (PlayerPrefs.HasKey("ActualQuantityLevel1"))
-		{
-			PlayerPrefs.DeleteKey("ActualQuantityLevel1");
-
-		}
-		if (PlayerPrefs.HasKey("ActualQuantityLevel2"))
-		{
-			PlayerPrefs.DeleteKey("ActualQuantityLevel2");
-		}
-
-		if (PlayerPrefs.HasKey("ActualQuantityLevel3"))
-		{
-			PlayerPrefs.DeleteKey("ActualQuantityLevel3");
-		}
-
 		if (PlayerPrefs.HasKey("SetSpawnHub"))
 		{
 			PlayerPrefs.DeleteKey("SetSpawnHub");
@@ -69,7 +54,7 @@ public class ButtonsMenu : MonoBehaviour
 
 
 
-		for (int i = 0; i < 16; i++)
+		for (int i = 0; i < 20; i++)
 		{
 			if(PlayerPrefs.HasKey("Dialogo" + i))
 			{
